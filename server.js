@@ -5,6 +5,11 @@ var publicDirectory = new static.Server('./public');
 
 
 require('http').createServer(function(request, response) {
+	if( request.url === '/' ){
+		request.url = '/flashy/public/';
+	}
+	
+	
 	if(request.url.indexOf("/flashy/public") === 0){
 		request.url = request.url.substring(14);
 		if(request.url === '/'){
@@ -26,6 +31,7 @@ require('http').createServer(function(request, response) {
 				}
 			});
 		}).resume();
+		
 	} else {
 		request.resume();
 	}
