@@ -80,6 +80,10 @@ body{
 }
 
 .card{
+
+}
+
+.view{
     width: 360px;
     height: 240px;
     margin: 0px auto;
@@ -92,10 +96,10 @@ p {
     text-align: center;
 }
 
-.card .view{
-    vertical-align: center;
+.view.stacked{
+    width: 360px;
+    height: 240px;
 }
-
 .material {
 }
 
