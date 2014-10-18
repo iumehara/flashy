@@ -1,10 +1,12 @@
 {	
+	"id" : 5,
 	"owner_id": 3,
-	""
-
+	"name" : "Zo's Favorite presidents",
+	"description" : "A list of my favorite presidents!",
+	"score" : 30,
 	"cards" : [
 		{
-			"id" : 1
+			"id" : 7,
 			"front" : {
 				"text" : "Theodore Roosevelt",
 				"image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
@@ -16,9 +18,13 @@
 			"category" : "Presidents",
 			"favorite" : false,
 			"score" : 8,
-			"original_id" : 3
+			"original_id" : 3,
+			"tags" : [
+				"hunting", "Teddy"
+			]
 		},
 		{
+			"id" : 8,
 			"front" : {
 				"text" : "Abraham Lincoln",
 				"image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Abraham_Lincoln_November_1863.jpg/486px-Abraham_Lincoln_November_1863.jpg"
@@ -30,9 +36,13 @@
 			"category" : "Presidents",
 			"score" : 12,
 			"favorite" : true,
-			"owner_id" : 3
+			"original_id" : 2,
+			"tags" : [
+				"civil war", "honest"
+			]
 		},
 		{
+			"id" : 9,
 			"front" : {
 				"text" : "Barack Obama",
 				"image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"
@@ -44,7 +54,10 @@
 			"category" : "Presidents",
 			"score" : 10,
 			"favorite" : false,
-			"owner_id" : 2
+			"original_id" : 5,
+			"tags" : [
+				"democrat", "harvard law school"
+			]
 		}
 	]
 }
