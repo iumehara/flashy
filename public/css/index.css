@@ -6,19 +6,19 @@
 }
 
 .button.favorite {
-    background-image: url('/flashy/images/heartIcon.gif');
+    background-image: url('/flashy/public/images/heartIcon.gif');
     right: 0px;
     top: 0px;
 }
 
 .button.menu {
-    background-image: url('/flashy/images/heartIcon.gif');
+    background-image: url('/flashy/public/images/heartIcon.gif');
     right: 0px;
     top: 0px;
 }
 
 .button.back {
-    background-image: url('/flashy/images/back-icon.png');
+    background-image: url('/flashy/public/images/back-icon.png');
     left: 0px;
     top: 0px;
 }

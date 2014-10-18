@@ -4,7 +4,7 @@ function Card(card_json){
 
 Card.prototype.render = function(container){
 	renderer = function(container){
-		this.template = $(Card.template(this))
+		this.template = $(Card.template(this));
 		this.template.appendTo(container);
 		
 		$(this.template).find(".top").addClass("show");
@@ -30,7 +30,7 @@ Card.prototype.render = function(container){
 
 
 Card.primeTemplate = function(callback){
-	$.get("/flashy/templates/card.hbs", null, function(source){
+	$.get("/flashy/public/templates/card.hbs", null, function(source){
 		Card.template = Handlebars.compile(source);
 		if(callback){
 			callback();
