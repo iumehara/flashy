@@ -29,11 +29,9 @@ and open the template in the editor.
 
         <!-- Executable JS -->
         <script type="text/javascript">
-            jQuery.getJSON("data/deck.json", null, function(deck){
-                $(document).ready(function(){
-                    var flashy = new Flashy("player", $("#main"), deck);
-                });   
-            });
+            $(document).ready(function(){
+                var flashy = new Flashy("player", $("#main"), deck);
+            });   
         </script>
     </body>
 </html>

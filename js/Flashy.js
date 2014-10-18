@@ -1,28 +1,28 @@
 function Flashy( type, container, deck ){
 	this.type = type;
 	
-	function makeTools(body){
+	function makeTools(toolsContainer){
 		$("<div/>",{"class":"button back"}).click(function(ev){
 			window.location = "/";
-		}).appendTo(body);
+		}).appendTo(toolsContainer);
 		
 		if( type === "creator" ){
 			$("<div/>",{"class":"button menu"}).click(function(ev){
 				window.location = "/";
-			}).appendTo(body);
+			}).appendTo(toolsContainer);
 		} else {
 			$("<div/>",{"class":"button favorite"}).click(function(ev){
 				window.location = "/";
-			}).appendTo(body);
+			}).appendTo(toolsContainer);
 		}
 	}
 	
-	
-	
-	
-	
 	makeTools(container);
-	// Make back tool
+	
+	
+	jQuery.getJSON("/flashy/data/deck.json", null, function(deck){
+		this.deck = new Deck(deck);
+	}.bind(this));
 	
 	
 	
