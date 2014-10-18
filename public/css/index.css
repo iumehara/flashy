@@ -10,9 +10,16 @@
 }
 
 .button.favorite {
-    background-image: url('/flashy/public/images/heartIcon.gif');
+    background-image: url('/flashy/public/images/favorite.png');
     right: 0px;
     top: 0px;
+}
+
+.button.unfavorite{
+    background-image: url('/flashy/public/images/unfavorite.png');
+    right: 0px;
+    top: 0px;
+}
 }
 
 .button.menu {
@@ -22,16 +29,10 @@
 }
 
 .button.back {
-    background-image: url('/flashy/public/images/back-icon.png');
+    background-image: url('/flashy/public/images/back_icon.png');
     left: 0px;
     top: 0px;
 }
-
-
-
-
-
-
 
 #deck{
     
@@ -47,6 +48,33 @@
     text-align: center;
 }
 
+p {
+    text-align: center;
+}
+
 .card .view{
     vertical-align: center;
+}
+
+.material {
+}
+
+.header {
+    font-size: 8px;
+    font-color: D3D3D3;
+}
+
+.back p:n-child(1) {
+    font-size: 14px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.front p:n-child(1) {
+    font-size: 16px;
+    font-weight:bold;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
