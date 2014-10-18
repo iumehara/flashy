@@ -1,11 +1,11 @@
-.button{
+.topButton{
     display: block;
     width: 20px;
     height: 20px;
-    margin: 5px;
+    position: fixed;
 }
 
-.button.favorite{
+.button.favorite {
     background-image: url('images/favorite.png');
-    
+    right: 0px;
 }

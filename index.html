@@ -20,6 +20,9 @@ and open the template in the editor.
         <!-- Lib -->
         <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="lib/handlebars-v2.0.0.js"></script>
+        
+        <!-- Templates -->
+        <script type="text/x-handlebars-template" src="templates/card.hbs" id="hbs-card" ></script>
 
         <!-- Js -->
         <script type="text/javascript" src="js/Flashy.js"></script>
@@ -27,7 +30,10 @@ and open the template in the editor.
 
         <!-- Executable JS -->
         <script type="text/javascript">
-            var flashy = new Flashy();
+            var deck = jQuery.getJSON("data/deck.json");
+            $(document).ready(function(){
+                var flashy = new Flashy("player", deck);
+            });
         </script>
     </body>
 </html>

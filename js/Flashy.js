@@ -1,4 +1,4 @@
-function Flashy( type ){
+function Flashy( type, deck ){
 	this.type = type;
 	
 	function makeTools(body){
@@ -15,14 +15,13 @@ function Flashy( type ){
 				window.location = "/";
 			}).appendTo(body);
 		}
-		
 	}
 	
 	
 	
 	
 	
-	makeTools(body);
+	makeTools(document.body);
 	// Make back tool
 	
 	
