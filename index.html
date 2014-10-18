@@ -16,16 +16,13 @@ and open the template in the editor.
     </head>
     <body>
 
-        <div class="main"></div>
+        <div id="main"></div>
         
         
         <!-- Lib -->
         <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="lib/handlebars-v2.0.0.js"></script>
         
-        <!-- Templates -->
-        <script type="text/x-handlebars-template" src="templates/card.hbs" id="hbs-card" ></script>
-
         <!-- Js -->
         <script type="text/javascript" src="js/Flashy.js"></script>
         <script type="text/javascript" src="js/Card.js"></script>
@@ -34,7 +31,7 @@ and open the template in the editor.
         <script type="text/javascript">
             jQuery.getJSON("data/deck.json", null, function(deck){
                 $(document).ready(function(){
-                    var flashy = new Flashy("player", deck);
+                    var flashy = new Flashy("player", $("#main"), deck);
                 });   
             });
         </script>

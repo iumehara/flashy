@@ -1,4 +1,4 @@
-function Flashy( type, deck ){
+function Flashy( type, container, deck ){
 	this.type = type;
 	
 	function makeTools(body){
@@ -21,7 +21,7 @@ function Flashy( type, deck ){
 	
 	
 	
-	makeTools(document.body);
+	makeTools(container);
 	// Make back tool
 	
 	
