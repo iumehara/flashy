@@ -1,0 +1,58 @@
+[
+	{
+		"name" : "Presidents",
+		"score" : 10,
+		"difficulty": 3,
+		"tags" : [
+			"presidents", "politics", "US History"
+		]
+	},
+	{
+		"name" : "Animals",
+		"score" : 8,
+		"difficulty": 2,
+		"tags" : [
+			"animals", "biology", "nature"
+		]
+	},
+	{
+		"name" : "Chemical Reactions",
+		"score" : 12,
+		"difficulty": 6,
+		"tags" : [
+			"biology", "high school"
+		]
+	},
+	{
+		"name" : "Countries and capitals",
+		"score" : 5,
+		"difficulty": 5,
+		"tags" : [
+			"countries", "capitals", "US", "politics"
+		]
+	},
+	{
+		"name" : "Spanish",
+		"score" : 10,
+		"difficulty": 5,
+		"tags" : [
+			"spanish", "foreign languages", "Spain", "countries", "high school"
+		]
+	},
+	{
+		"name" : "Famous Authors",
+		"score" : 5,
+		"difficulty": 4,
+		"tags" : [
+			"literature", "novels", "authors"
+		]
+	},
+	{
+		"name" : "Objective-C",
+		"score" : 1,
+		"difficulty": 6,
+		"tags" : [
+			"programming", "objective-c", "computer sciencet"
+		]
+	}
+]

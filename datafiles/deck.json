@@ -4,6 +4,9 @@
 	"name" : "Zo's Favorite presidents",
 	"description" : "A list of my favorite presidents!",
 	"score" : 30,
+	"tags": [
+		"presidents", "politics", "US History"
+	],
 	"cards" : [
 		{
 			"id" : 7,
