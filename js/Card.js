@@ -1,4 +1,4 @@
-function Card(){
+function Card(card_json){
 }
 
 

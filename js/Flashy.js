@@ -1,4 +1,4 @@
-function Flashy( type, container, deck ){
+function Flashy( type, container){
 	this.type = type;
 	
 	function makeTools(toolsContainer){
