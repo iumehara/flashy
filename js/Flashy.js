@@ -1,7 +1,31 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
+function Flashy( type ){
+	this.type = type;
+	
+	function makeTools(body){
+		$("<div/>",{"class":"button back"}).click(function(ev){
+			window.location = "/";
+		}).appendTo(body);
+		
+		if( type === "creator" ){
+			$("<div/>",{"class":"button menu"}).click(function(ev){
+				window.location = "/";
+			}).appendTo(body);
+		} else {
+			$("<div/>",{"class":"button favorite"}).click(function(ev){
+				window.location = "/";
+			}).appendTo(body);
+		}
+		
+	}
+	
+	
+	
+	
+	
+	makeTools(body);
+	// Make back tool
+	
+	
+	
+	
+}
