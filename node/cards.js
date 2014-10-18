@@ -1,7 +1,3 @@
-var pgQuery = require('pg-query');
-
-
-
 
 
 function favorite(request){

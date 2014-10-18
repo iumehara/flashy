@@ -1,3 +1,7 @@
+#tools{
+    height: 100px;
+}
+
 .button{
     display: block;
     width: 48px;
@@ -21,4 +25,20 @@
     background-image: url('/flashy/public/images/back-icon.png');
     left: 0px;
     top: 0px;
+}
+
+
+
+
+
+
+
+#deck{
+    
+}
+
+.card{
+    width: 480px;
+    height: 360px;
+    display: inline-block;
 }
