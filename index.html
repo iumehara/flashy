@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Flashy</title>
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/index.css"></link>
@@ -15,8 +15,10 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div>TODO write content</div>
 
+        <div class="main"></div>
+        
+        
         <!-- Lib -->
         <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="lib/handlebars-v2.0.0.js"></script>
@@ -30,9 +32,10 @@ and open the template in the editor.
 
         <!-- Executable JS -->
         <script type="text/javascript">
-            var deck = jQuery.getJSON("data/deck.json");
-            $(document).ready(function(){
-                var flashy = new Flashy("player", deck);
+            jQuery.getJSON("data/deck.json", null, function(deck){
+                $(document).ready(function(){
+                    var flashy = new Flashy("player", deck);
+                });   
             });
         </script>
     </body>
