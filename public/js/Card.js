@@ -11,7 +11,7 @@ function Card(card_json){
 }
 
 Card.prototype.render = function(container){
-	renderer = function(container){
+	var renderer = function(container){
 		this.view = $(Card.template(this));
 		this.view.appendTo(container);
 		

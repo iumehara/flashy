@@ -38,7 +38,15 @@
 }
 
 .card{
-    width: 480px;
-    height: 360px;
+    width: 360px;
+    height: 240px;
+    margin: 0px 80px;
     display: inline-block;
+    cursor: pointer;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.card .view{
+    vertical-align: center;
 }
