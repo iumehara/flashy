@@ -17,12 +17,14 @@ body{
 
 .button.favorite {
     background-image: url('/flashy/public/images/favorite.png');
+    background-size: 60px 48px;
     right: 0px;
     top: 0px;
 }
 
 .button.unfavorite{
     background-image: url('/flashy/public/images/unfavorite.png');
+    background-size: 48px 48px;
     right: 0px;
     top: 0px;
 }
@@ -30,12 +32,14 @@ body{
 
 .button.menu {
     background-image: url('/flashy/public/images/heartIcon.gif');
+    background-size: 48px 48px;
     right: 0px;
     top: 0px;
 }
 
 .button.back {
     background-image: url('/flashy/public/images/back_icon.png');
+    background-size: 48px 48px;
     left: 0px;
     top: 0px;
 }
@@ -100,14 +104,14 @@ p {
     font-color: D3D3D3;
 }
 
-.back p:n-child(1) {
+.back p:n-child(2) {
     font-size: 14px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.front p:n-child(1) {
+.front p:n-child(2) {
     font-size: 16px;
     font-weight:bold;
     position: relative;
