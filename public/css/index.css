@@ -17,7 +17,7 @@ body{
 
 .button.favorite {
     background-image: url('/flashy/public/images/favorite.png');
-    background-size: 60px 48px;
+    background-size: 48px 48px;
     right: 0px;
     top: 0px;
 }
