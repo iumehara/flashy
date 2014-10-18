@@ -1,5 +1,8 @@
-var static = require('node-static');
-var util = require('util');
+var static = require('node-static'),
+	util = require('util'),
+	cards = require('./node/cards'),
+	decks = require('./node/decks')
+	;
 
 var publicDirectory = new static.Server('./public');
 
@@ -8,7 +11,6 @@ require('http').createServer(function(request, response) {
 	if( request.url === '/' ){
 		request.url = '/flashy/public/';
 	}
-	
 	
 	if(request.url.indexOf("/flashy/public") === 0){
 		request.url = request.url.substring(14);
@@ -31,7 +33,10 @@ require('http').createServer(function(request, response) {
 				}
 			});
 		}).resume();
-		
+	} else if( request.url.indexOf("/cards") === 0 ) {	
+		cards.handle(request, response);
+	} else if( request.url.indexOf("/decks") === 0 ) {	
+		decks.handle(request, response);
 	} else {
 		request.resume();
 	}
