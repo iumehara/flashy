@@ -1,5 +1,5 @@
 function Card(){
-	$(document).ready(function(){
+
 				$(".top").addClass("show");
 				$(".view").click(function(){
 					if($(".top").hasClass("show")){
@@ -9,6 +9,5 @@ function Card(){
 						$(".top").addClass("show");
 						$(".bottom").removeClass("show");
 					}
-				})
-			});
+				});
 }

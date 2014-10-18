@@ -1,11 +1,24 @@
 .button{
     display: block;
-    width: 20px;
-    height: 20px;
-    margin: 5px;
+    width: 48px;
+    height: 48px;
+    position: fixed;
 }
 
-.button.favorite{
-    background-image: url('images/favorite.png');
-    
+.button.favorite {
+    background-image: url('/flashy/images/heartIcon.gif');
+    right: 0px;
+    top: 0px;
+}
+
+.button.menu {
+    background-image: url('/flashy/images/heartIcon.gif');
+    right: 0px;
+    top: 0px;
+}
+
+.button.back {
+    background-image: url('/flashy/images/back-icon.png');
+    left: 0px;
+    top: 0px;
 }
