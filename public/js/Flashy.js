@@ -30,7 +30,7 @@ Flashy.prototype.render = function(container, type){
 		this.deck = new Deck(deck);
 		var name = $("<div/>", {"id":"deckTitle"}).text(this.deck.name);
 		name.appendTo(self.toolsContainer);
-		this.deck.render(this.deckContainer);
+		this.deck.render(this.deckContainer, type);
 	}.bind(this));
 
 };

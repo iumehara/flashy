@@ -15,7 +15,6 @@ function Deck(deck_json){
 	}
 }
 
-jQuery.extend(Deck, Base);
 
 
 Deck.prototype.render = function(deck_container, type){
@@ -49,11 +48,11 @@ Deck.prototype.render = function(deck_container, type){
 };
 
 Deck.prototype.renderSmall = function(deck_container){
-	var renderer = function(){
-		this.view = $(Deck.template(this));
+	TemplatePrimer.get("deck", function(template){
+		this.view = $(template(this));
 		this.view.appendTo(deck_container);
-	}.bind(this);
-	
+	}.bind(this));
+
 	if(Deck.template){
 		renderer(deck_container);
 	} else {

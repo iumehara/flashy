@@ -9,13 +9,13 @@ function Card(card_json){
 	this.tags = card_json.tags;
 }
 
-jQuery.extend(Card, Base);
-
 
 
 Card.prototype.render = function(container, type){
-	var renderer = function(container){
-		this.view = $(Card.template({
+	var templateName = (type === "creator" ? "card_creator" : "card");
+	
+	TemplatePrimer.get(templateName, function(template){
+		this.view = $(template({
 			card: this,
 			type: type
 		}));
@@ -25,18 +25,12 @@ Card.prototype.render = function(container, type){
 		this.back.view = this.view.find(".back");
 		
 		var self = this;
-		this.view.click(function(ev){
-			self.toggle();
-		});
-	}.bind(this);
-	
-	if(Card.template){
-		renderer(container);
-	} else {
-		Card.primeTemplate(function(){
-			renderer(container);
-		});
-	}
+		if( type === "player"){
+			this.view.click(function(ev){
+				self.toggle();
+			});
+		}
+	}.bind(this));
 };
 
 Card.prototype.toggle = function(){
