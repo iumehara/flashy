@@ -26,18 +26,18 @@ Deck.prototype.render = function(deck_container, type){
 	this.deck_slider.css("width", (960*this.cards.length)+"px");
 		
 	this.cards.forEach(function(card, idx){ 
-		var card_shield = $("<div/>",{"class":"cardShield"}).appendTo(this.deck_slider);
+		card.shield = $("<div/>",{"class":"cardShield"}).appendTo(this.deck_slider);
 		if( idx !== 0){
-			$("<div/>",{"class":"navigation left","html":"<"}).
-					appendTo(card_shield).
+			$("<div/>",{"class":"navigation left","html":"<span>&lt;</span>"}).
+					appendTo(card.shield).
 					click(function(ev){
 						self.retreat();
 					});
 		}
-		card.render(card_shield, type); 
+		card.render(card.shield, type); 
 		if( idx !== this.cards.length-1 ){
-			$("<div/>",{"class":"navigation right","html":">"}).
-					appendTo(card_shield).
+			$("<div/>",{"class":"navigation right","html":"<span>&gt;</span>"}).
+					appendTo(card.shield).
 					click(function(ev){
 						self.advance();
 					});
@@ -65,24 +65,46 @@ Deck.prototype.renderSmall = function(deck_container){
 
 
 Deck.prototype.selectCard = function(idx){
+	if(typeof this.selectedIndex === 'number'){
+		this.cards[this.selectedIndex].shield.removeClass("active");
+	}
 	this.selectedIndex = idx;
 	this.deck_slider.animate({"left": "-"+(idx*960)+"px"}, 300);
+	this.cards[idx].shield.addClass("active");
 };
 
 Deck.prototype.advance = function(){
+	var idx;
 	if(this.selectedIndex === this.cards.length-1){
-		this.selectedIndex = 0;
+		idx = 0;
 	} else {
-		this.selectedIndex++;
+		idx = this.selectedIndex + 1;
 	}
-	this.selectCard(this.selectedIndex);
+	this.selectCard(idx);
 };
 
 Deck.prototype.retreat = function(){
+	var idx;
 	if(this.selectedIndex === 0){
-		this.selectedIndex = this.cards.length-1;
+		idx = this.cards.length-1;
 	} else {
-		this.selectedIndex--;
+		idx = this.selectedIndex-1;
 	}
-	this.selectCard(this.selectedIndex);
+	this.selectCard(idx);
 };
+
+
+
+
+
+Deck.get = function(id){
+	var url = "/decks/"+id;
+	var url = "/flashy/public/data/deck.json";
+	return new Promise(function(success, error){
+		$.getJSON( url, function(deck_json){
+            var deck = new Deck(deck_json);
+			success(deck);
+		});
+	});
+};
+

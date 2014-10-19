@@ -12,3 +12,19 @@ DeckList.prototype.render = function(container){
 		deck.renderSmall(container);
 	});
 };
+
+
+
+
+
+
+DeckList.get = function(user_id){
+	var url = "/decks";
+	var url = "/flashy/public/data/deck_list.json";
+	return new Promise(function(success, error){
+		$.getJSON( url, function(data){
+			var decklist = new DeckList(data);
+			success(decklist);
+		});
+	});
+};
