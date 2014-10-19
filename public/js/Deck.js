@@ -103,6 +103,9 @@ Deck.prototype.marshal = function(){
 
 Deck.prototype.save = function(){
 	var url = "/decks/"+this.id;
+	window.player && window.player.setAttributes({
+		key1: 'values'
+	});
 	return new Promise(function(success, error){
 		$.post( url, this.marshal(), function(data){
 			success(data);
@@ -113,8 +116,8 @@ Deck.prototype.save = function(){
 
 
 Deck.get = function(id){
-	var url = "http://192.168.2.87:3000/decks/"+id;
-	//var url = "/flashy/public/data/deck.json";
+	//var url = "http://192.168.2.87:3000/decks/"+id;
+	var url = "public/data/deck.json";
 	return new Promise(function(success, error){
 		$.getJSON( url, function(deck_json){
             var deck = new Deck(deck_json);

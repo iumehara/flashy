@@ -4,6 +4,9 @@ function Flashy( deck ){
 
 Flashy.prototype.render = function(container, type){
 	var self = this;
+	var name;
+	
+	container.empty();
 		
 	var toolsContainer = $("<div/>", {"id":"tools"}).appendTo(container);
 	$("<div/>",{"class":"button back"}).click(function(ev){
@@ -16,23 +19,24 @@ Flashy.prototype.render = function(container, type){
 		$("<div/>",{"class":"button save"}).click(function(ev){
 			self.deck.save();
 		}).appendTo(toolsContainer);
+		var name = $("<input/>", {
+			"id":"deckTitle", 
+			"type": "text", 
+			"value": this.deck.name
+		}).appendTo(toolsContainer);
 	} else if ( type === "learner" ) {
 		$("<div/>",{"class":"button favorite"}).click(function(ev){
 			$(this).toggleClass("on");
 		}).appendTo(toolsContainer);
+		name = $("<div/>", {"id":"deckTitle"}).text(this.deck.name).appendTo(toolsContainer);
 	} else { // type === "player"
-		
+		name = $("<div/>", {"id":"deckTitle"}).text(this.deck.name).appendTo(toolsContainer);
 	}
 	
+	name.click(function(ev){ self.deck.save(); });
+	
 	var deckContainer = $("<div/>", {"id":"deck"}).appendTo(container);
-	var name = $("<div/>", {"id":"deckTitle"}).text(this.deck.name).appendTo(toolsContainer);
-	this.deckContainer = $("<div/>", {"id":"deck"}).appendTo(container);
-	var self = this;
-	jQuery.getJSON("/flashy/public/data/deck.json", null, function(deck){
-		this.deck = new Deck(deck);
-		var name = $("<div/>", {"id":"deckTitle"}).text(this.deck.name);
-		name.appendTo(self.toolsContainer);
-		this.deck.render(this.deckContainer, type);
-	}.bind(this));
-
+	
+	$("<div/>", {"id":"deckTitle"}).text(this.deck.name).appendTo(self.toolsContainer);
+	this.deck.render(deckContainer, type);
 };

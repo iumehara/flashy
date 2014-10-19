@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Empty gadget</title>
+        <script src="bower_components/versal-component-runtime/dist/runtime.min.js"></script>
+        <link rel="import" href="bower_components/versal-gadget-api/versal-gadget-api.html">
+        <link rel="stylesheet" href="public/css/index.css"></link>
+    </head>
+
+    <body>
+        
+    <div id="main"></div>
+
+
+    <!-- Lib -->
+    <script type="text/javascript" src="public/lib/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="public/lib/handlebars-v2.0.0.js"></script>
+
+    <!-- Js -->
+    <script type="text/javascript" src="public/js/Flashy.js"></script>
+    <script type="text/javascript" src="public/js/TemplatePrimer.js"></script>
+    <script type="text/javascript" src="public/js/Deck.js"></script>
+    <script type="text/javascript" src="public/js/Card.js"></script>
+    
+    <script type="text/javascript" src="public/js/Card.js"></script>
+    
+
+    <!-- Executable JS -->
+    <script type="text/javascript">
+        var flashy;
+        
+        $(document).ready(function() {
+            var deck_id = "5";
+            var flashy_type = "player";
+
+            // Todo: Use Deck Id to Get Deck
+            jQuery.getJSON("public/data/deck.json", null, function(deck_json) {
+                var deck = new Deck(deck_json);
+                flashy = new Flashy(deck);
+                flashy.render($("#main"), flashy_type);
+            });
+        });
+
+        window.player = new VersalPlayerAPI();
+        player.on('attributesChanged', function(data) {
+           console.log('attributeschanged', data);
+           
+        });
+        
+        for(var i=0; i<10; i++){
+            var obj = {};
+            obj[i] = i;
+            player.setAttributes(obj);
+        }
+
+        player.on('editableChanged', function(editable) {
+            console.log('editableChanged', editable.editable);
+            var flashy_type;
+            if(editable.editable){
+                flashy_type = "creator";
+            } else {
+                flashy_type = "player";
+            }
+            flashy && flashy.render($("#main"), flashy_type);
+        });
+
+        player.setHeight(2000);
+        player.startListening();
+    </script>       
+    </body>
+
+</html>
