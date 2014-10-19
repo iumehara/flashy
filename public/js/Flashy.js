@@ -1,6 +1,6 @@
-function Flashy( type, deck_json ){
+function Flashy( type, deck ){
 	this.type = type;
-	this.deck = new Deck(deck_json);
+	this.deck = deck;
 }
 
 Flashy.prototype.render = function(container){

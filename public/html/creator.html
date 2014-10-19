@@ -32,7 +32,8 @@ and open the template in the editor.
         <!-- Executable JS -->
         <script type="text/javascript">
             $(document).ready(function(){
-                jQuery.getJSON("/flashy/public/data/deck.json", null, function(deck){   
+                jQuery.getJSON("/flashy/public/data/deck.json", null, function(deck_json){   
+                    var deck = new Deck(deck_json);
                     var flashy = new Flashy("creator", deck);
                     flashy.render( $("#main") );
                 });
