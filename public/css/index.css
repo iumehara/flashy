@@ -85,7 +85,7 @@ body{
     width: 10%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 15%;
     cursor: pointer;
     font-size: 32px;
 }
@@ -127,12 +127,34 @@ p {
     font-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
+.back p:nth-child(1) {
+    font-size: 14px;
+    top: 50%;
+}
+
+.front p:nth-child(1) {
+=======
 .view p:nth-child(2) {
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+>>>>>>> b7aee16e799c1c1ec215ed1c0af8a0d523a700b1
     font-size: 16px;
 }
 
+.deck {
+    border-color: black;
+    border-width:2px;
+    text-align:center;
+}
+
+.deck a {
+    text-decoration:none;
+}
+
+.deck.statistics {
+    font-color:gray;
+}

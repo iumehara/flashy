@@ -24,6 +24,13 @@ Flashy.prototype.render = function(container, type){
 	
 	var deckContainer = $("<div/>", {"id":"deck"}).appendTo(container);
 	var name = $("<div/>", {"id":"deckTitle"}).text(this.deck.name).appendTo(toolsContainer);
-	
-	this.deck.render(deckContainer, type);
+	this.deckContainer = $("<div/>", {"id":"deck"}).appendTo(container);
+	var self = this;
+	jQuery.getJSON("/flashy/public/data/deck.json", null, function(deck){
+		this.deck = new Deck(deck);
+		var name = $("<div/>", {"id":"deckTitle"}).text(this.deck.name);
+		name.appendTo(self.toolsContainer);
+		this.deck.render(this.deckContainer);
+	}.bind(this));
+
 };
