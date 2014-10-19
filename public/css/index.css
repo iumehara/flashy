@@ -33,7 +33,6 @@ body{
     right: 0px;
     top: 0px;
 }
-}
 
 .button.menu {
     background-image: url('/flashy/public/images/menu.png');
@@ -50,6 +49,11 @@ body{
     left: 0px;
     top: 0px;
 }
+
+
+
+
+
 
 #deckTitle {
     left: 30%;
@@ -87,12 +91,13 @@ body{
 }
 
 .navigation.left{
-    left: 0;
+    left: 10;
 }
 
 .navigation.right{
-    right: 0;
+    right: 10;
 }
+
 
 .card{
 
@@ -105,6 +110,7 @@ body{
     cursor: pointer;
     border: 1px solid #333;
     text-align: center;
+    position: relative;
 }
 
 p {
@@ -118,17 +124,15 @@ p {
 
 .header {
     font-size: 8px;
-    font-color: D3D3D3;
+    font-color: #D3D3D3;
 }
 
-.back p:n-child(1) {
-    font-size: 14px;
+.view p:nth-child(2) {
+    position: absolute;
+    left: 0;
+    right: 0;
     top: 50%;
-}
-
-.front p:n-child(1) {
+    transform: translateY(-50%);
     font-size: 16px;
-    font-weight:bold;
-    top: 50%;
 }
 
