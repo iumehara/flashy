@@ -122,7 +122,13 @@ Deck.get = function(id){
 		$.getJSON( url, function(deck_json){
             var deck = new Deck(deck_json);
 			success(deck);
+		}).fail(function(err){
+			console.log("ERRRORRRADR");
+			console.log(err);
 		});
 	});
 };
+
+
+
 

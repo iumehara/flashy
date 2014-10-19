@@ -1,49 +1,109 @@
-[
+[{
+        "owner_id": 3,
+        "name": "World Geography",
+        "description": "A list of countries and capitals",
+        "score": 30,
+        "tags": [
+            "geography", "world"
+        ],
+        "card_ids": [
+        ],
+        "cards": [
+        ]
+    },
     {
-        "id": 5,
+        "owner_id": 5,
         "name": "Presidents",
+        "description": "All of the presidents in US history",
         "score": 10,
         "difficulty": 3,
         "tags": [
             "presidents", "politics", "US History"
+        ],
+        "card_ids": [
+        ],
+        "cards": [
         ]
     },
     {
-        "id": 6,
+        "owner_id": 6,
         "name": "Animals",
         "score": 8,
         "difficulty": 2,
         "tags": [
             "animals", "biology", "nature"
+        ],
+        "card_ids": [
+        ],
+        "cards": [
         ]
     },
     {
-        "id": 7,
+        "owner_id": 7,
         "name": "Chemical Reactions",
         "score": 12,
         "difficulty": 6,
         "tags": [
             "biology", "high school"
+        ],
+        "card_ids": [
+        ],
+        "cards": [
         ]
     },
     {
-        "id": 8,
+        "owner_id": 8,
         "name": "Countries and capitals",
         "score": 5,
         "difficulty": 5,
         "tags": [
             "countries", "capitals", "US", "politics"
+        ],
+        "card_ids": [
+        ],
+        "cards": [
         ]
     },
     {
-        "id": 9,
+        "owner_id": 9,
         "name": "Spanish",
         "score": 10,
         "difficulty": 5,
         "tags": [
             "spanish", "foreign languages", "Spain", "countries", "high school"
+        ],
+        "card_ids": [
+        ],
+        "cards": [
         ]
     },
+    {
+        "owner_id": 10,
+        "name": "Famous Authors",
+        "score": 5,
+        "difficulty": 4,
+        "tags": [
+            "literature", "novels", "authors"
+        ],
+        "card_ids": [
+        ],
+        "cards": [
+        ]
+    },
+    {
+        "owner_id": 11,
+        "name": "Objective-C",
+        "score": 1,
+        "difficulty": 6,
+        "tags": [
+            "programming", "objective-c", "computer sciencet"
+        ],
+        "card_ids": [
+        ],
+        "cards": [
+        ]
+    }
+]
     {
         "id": 10,
         "name": "Famous Authors",
