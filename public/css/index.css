@@ -14,6 +14,7 @@ body{
     height: 36px;
     position:fixed;
     margin-top:12px;
+    cursor:pointer;
 
 }
 
@@ -21,7 +22,6 @@ body{
     background-image: url('/flashy/public/images/favorite.png');
     background-size: 36px 36px;
     margin-right:12px;
-    background-position:center;
     right: 0px;
     top: 0px;
 }
@@ -30,7 +30,6 @@ body{
     background-image: url('/flashy/public/images/unfavorite.png');
     background-size: 36px 36px;
     margin-right:12px;
-    background-position: center;
     right: 0px;
     top: 0px;
 }
@@ -52,11 +51,6 @@ body{
     border:2px solid;
     border-color:black;
 }
-
-
-
-
-
 
 #deckTitle {
     left: 30%;
@@ -93,6 +87,10 @@ body{
     font-size: 32px;
 }
 
+.navigation:hover{
+    background-color:#FFC469;
+}
+
 .navigation.left{
     left: 10px;
 }
@@ -120,8 +118,6 @@ p {
     text-align: center;
 }
 
-
-
 .view.stacked{
     width: 360px;
     height: 240px;
@@ -129,19 +125,15 @@ p {
 
 .header {
     font-size: 8px;
-    font-color: #D3D3D3;
-}
-
-.view p:nth-child(2) {
     color: #D3D3D3;
 }
 
 .view .text {
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     top: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     font-size: 20px;
 }
 
@@ -154,6 +146,7 @@ p {
     display:inline-block;
     margin: 8px;
     padding:4px;
+    width:480px;
 }
 
 .deck a {
@@ -161,9 +154,8 @@ p {
     color:inherit;
 }
 
-.deck.title {
-    font-color:black;
-    font-size:16px;
+.deck:hover {
+    background-color:#FFC469;
 }
 
 .deck.statistics {
