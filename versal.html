@@ -38,6 +38,14 @@
                 flashy = new Flashy(deck);
                 flashy.render($("#main"), flashy_type);
             });
+
+            $("body").keydown(function(e){
+            	if(e.keyCode == 37){// left
+            		flashy.deck.retreat();
+            	} else if (e.keyCode == 39) {//right
+            		flashy.deck.advance();
+            	}
+            });
         });
 
         window.player = new VersalPlayerAPI();
