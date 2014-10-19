@@ -5,6 +5,12 @@
     </div>
     <div class="view back" style="opacity: 0;">
             <p class="header">Back View</p>
-            <p class="text"><span>{{ card.front.text }}</span></p>
+            <p class="text">
+                <span style="display: block; margin: 0px auto 10px; background-image: url('{{ card.front.image }}'); height: 72px; width: 72px; background-size: 72px; border-radius: 36px;">
+                </span>
+                <span>
+                    {{ card.front.text }}
+                </span>
+            </p>
     </div>
 </div>

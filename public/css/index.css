@@ -112,6 +112,7 @@ p {
     width: 720px;
     height: 230px;
     margin-bottom: 22px;
+    position: relative;
 }
 
 .header {
@@ -130,8 +131,21 @@ p {
     line-height: 24px;
 }
 
+.view .text input{
+    width: 80%;
+}
+.view .text label{
+    width: 80px;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+
 .view.stacked textarea.text, .view.stacked input.text{
-    width: 680px;
+    width: 640px;
     left: 17px;
     right: 17px;
     border: none;
@@ -140,6 +154,7 @@ p {
     padding: 2px;
     font-family: monospace;
     transform: translateY(-50%);
+    margin: 0px 20px;
 }
 
 .view img{
