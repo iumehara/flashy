@@ -12,6 +12,7 @@ Flashy.prototype.render = function(container, type){
 	$("<div/>",{"class":"button back"}).click(function(ev){
 		window.location = "/";
 	}).appendTo(toolsContainer);
+	$(".button.back").html('<i class="fa fa-arrow-left fa-1x"></i>');
 	if( type === "creator" ){
 		$("<div/>",{"class":"button add"}).click(function(ev){
 			self.deck.add();

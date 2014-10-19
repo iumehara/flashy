@@ -39,7 +39,7 @@ body{
 }
 
 .button.back {
-    background-image: url('/flashy/public/images/back_icon.png');
+    /*background-image: url('/flashy/public/images/back_icon.png');*/
     border:2px solid;
     border-color:black;
 }
