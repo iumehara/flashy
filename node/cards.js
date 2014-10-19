@@ -50,12 +50,22 @@ function create(request, response){
 };
 
 function update(request, response){
-	$content = '{ "test-key" : "test-value" }'
-	console.log($content);
-  client.query('INSERT INTO cards (body) VALUES ($content) ', function(err, result) {
-    console.log(result);
-  });
-}
+	var card_id = request.url.split("/")[2];
+	var body = '';
+	request.on('data', function (data) {
+		body += data;
+		if (body.length > 1e6){
+			request.connection.destroy();
+		};
+	});
+	request.on('end', function(){
+	  client.query('Update cards SET content = $1 WHERE id = $2;', [body, card_id], function(err, result) {
+	  	response.setHeader('Content-Type', 'application/json');
+	    console.log(err);
+	    console.log(result);
+	  });
+	})
+};
 
 exports.handle = function(request, response){
 	switch(request.method){
@@ -63,7 +73,11 @@ exports.handle = function(request, response){
 			show(request, response);
 			break;
 		case "POST":
-			create(request, response);
+			if (request.url.split("/")[2] != null){
+				update(request, response);
+			}	else {
+				create(request, response);
+			}
 			break;
 	}
 	request.resume();
