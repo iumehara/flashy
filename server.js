@@ -6,7 +6,6 @@ var static = require('node-static'),
 
 var publicDirectory = new static.Server('./public');
 
-
 require('http').createServer(function(request, response) {
 	if( request.url === '/' ){
 		request.url = '/flashy/public/';
@@ -33,7 +32,7 @@ require('http').createServer(function(request, response) {
 				}
 			});
 		}).resume();
-	} else if( request.url.indexOf("/cards") === 0 ) {	
+	} else if( request.url.indexOf("/cards") === 0 ) {
 		cards.handle(request, response);
 	} else if( request.url.indexOf("/decks") === 0 ) {	
 		decks.handle(request, response);

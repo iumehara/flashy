@@ -4,6 +4,7 @@
 	"name" : "Zo's Favorite presidents",
 	"description" : "A list of my favorite presidents!",
 	"score" : 30,
+	"difficulty" : 10,
 	"tags": [
 		"presidents", "politics", "US History"
 	],
