@@ -66,9 +66,21 @@ function create(request, response){
 };
 
 function update(request, response){
-	
+	var deck_id = request.url.split("/")[2];
+	var body = '';
+	request.on('data', function (data) {
+		body += data;
+		if (body.length > 1e6){
+			request.connection.destroy();
+		};
+	});
+	request.on('end', function(){
+	  client.query('Update decks SET content = $1 WHERE id = $2;', [body, deck_id], function(err, result) {
+	    console.log(err);
+	    console.log(result);
+	  });
+	})
 }
-
 
 exports.handle = function(request, response){
 	response.setHeader('Content-Type', 'application/json');
@@ -81,7 +93,11 @@ exports.handle = function(request, response){
 			}
 			break;
 		case "POST":
-			create(request, response);
+			if (request.url.split("/")[2] != null){
+				update(request, response);
+			}	else {
+				create(request, response);
+			}
 			break;
 	}
 	//request.resume();
