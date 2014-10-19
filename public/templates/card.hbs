@@ -1,10 +1,10 @@
 <div class="card">
     <div class="view front">
-            <p class="header">Top View</p>
-            <p class="text">{{ card.front.text }}</p>
+            <p class="header">Front View</p>
+            <p class="text">{{ card.back.text }}</p>
     </div>
     <div class="view back" style="display:none;">
-            <p class="header">Bottom View</p>
-            <p class="text">{{ card.back.text }}</p>
+            <p class="header">Back View</p>
+            <p class="text"><span>{{ card.front.text }}</span></p>
     </div>
 </div>
