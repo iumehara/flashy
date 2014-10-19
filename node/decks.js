@@ -1,18 +1,18 @@
 
 
-function favorite(request){
-	// do something here
-}
+// function favorite(request){
+// 	// do something here
+// }
 
 
-exports.handle = function(request, response){
-	var action = request.url.split("/")[2];
+// exports.handle = function(request, response){
+// 	var action = request.url.split("/")[2];
 	
-	switch(action){
-		case "favorite":
-			favorite(request);
-	}
+// 	switch(action){
+// 		case "favorite":
+// 			favorite(request);
+// 	}
 	
 	
 	
-};
+// };

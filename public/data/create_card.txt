@@ -1,0 +1,8 @@
+CREATE TABLE cards (
+	body    JSON
+);
+CREATE TABLE deck (
+  id         SERIAL,
+	content    JSON,
+  created_at timestamp default CURRENT_TIMESTAMP
+);
