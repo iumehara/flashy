@@ -1,23 +1,96 @@
-// JSON to front end
-
 {
-	"id" : 7,
-	"front" : {
-		"text" : "Theodore Roosevelt",
-		"image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
-	},
-	"back" : {
-		"text" : "26th president of the US.",
-		"image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
-	},
-	"score" : 8,
-	"favorite" : false,
-	"original_id" : 3,
-	"tags" : [
-		"hunting", "Teddy"
-	]
+  "front": {
+    "text": "Theodore Roosevelt",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
+  },
+  "back": {
+    "text": "26th president of the US.",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
+  },
+  "favorite": false,
+  "score": 8,
+  "original_id": 3,
+  "tags": [
+    "hunting", "Teddy"
+  ]
+},
+{
+  "front": {
+    "text": "Abraham Lincoln",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Abraham_Lincoln_November_1863.jpg/486px-Abraham_Lincoln_November_1863.jpg"
+  },
+  "back": {
+    "text": "16th president of the US.",
+    "details": "Abraham Lincoln Listeni/ˈeɪbrəhæm ˈlɪŋkən/ (February 12, 1809 – April 15, 1865) was the 16th president of the United States, serving from March 1861 until his assassination in April 1865. Lincoln led the United States through its Civil War—its bloodiest war and its greatest moral, constitutional and political crisis.[1][2] In doing so, he preserved the Union, abolished slavery, strengthened the federal government, and modernized the economy. Reared in a poor family on the western frontier, Lincoln was a self-educated lawyer in Illinois, a Whig Party leader, state legislator during the 1830s, and a one-term member of the Congress during the 1840s. He promoted rapid modernization of the economy through banks, canals, railroads and tariffs to encourage the building of factories; he opposed the war with Mexico in 1846. After a series of highly publicized debates in 1858, during which Lincoln spoke out against the expansion of slavery, he lost the U.S. Senate race to his archrival, Democrat Stephen A. Douglas. Lincoln, a moderate from a swing state, secured the Republican Party presidential nomination in 1860. With very little support in the slave states, Lincoln swept the North and was elected president in 1860. His election prompted seven southern slave states to form the Confederacy before he took the office. No compromise or reconciliation was found regarding slavery."
+  },
+  "score": 12,
+  "favorite": true,
+  "original_id": 2,
+  "tags": [
+    "civil war", "honest"
+  ]
+},
+{
+  "front": {
+    "text": "Barack Obama",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"
+  },
+  "back": {
+    "text": "44th president of the US.",
+    "details": "Barack Hussein Obama II (US Listeni/bəˈrɑːk huːˈseɪn ɵˈbɑːmə/, UK /ˈbærək huːˈseɪn ɵˈbɑːmə/; born August 4, 1961) is the 44th and current President of the United States, and the first African American to hold the office. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University and Harvard Law School, where he served as president of the Harvard Law Review. He was a community organizer in Chicago before earning his law degree. He worked as a civil rights attorney and taught constitutional law at the University of Chicago Law School from 1992 to 2004. He served three terms representing the 13th District in the Illinois Senate from 1997 to 2004, running unsuccessfully for the United States House of Representatives in 2000."
+  },
+  "score": 10,
+  "favorite": false,
+  "original_id": 5,
+  "tags": [
+    "democrat", "harvard law school"
+  ]
+},
+{
+  "front": {
+    "text": "France",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/125px-Flag_of_France.svg.png"
+  },
+  "back": {
+    "text": "Paris",
+    "details": "Paris (UK: /ˈpærɪs/; US: Listeni/ˈpɛərɪs/; French: [paʁi] ( listen)) is the capital and most populous city of France. Situated on the Seine River, in the north of the country, it is at the heart of the Île-de-France region, also known as the région parisienne[5] ('Paris Region' in English[6][7]). Within its administrative limits largely unchanged since 1860 (the 20 arrondissements), the city of Paris has a population of 2,249,975 inhabitants (January 2011),[4] but its metropolitan area is one of the largest population centres in Europe, with 12,292,895 inhabitants at the January 2011 census.[3]"
+  },
+  "score": 10,
+  "favorite": false,
+  "original_id": 10,
+  "tags": [
+    "geography", "europe", "france"
+  ]
+},
+{
+  "front": {
+    "text": "Germany",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/125px-Flag_of_Germany.svg.png"
+  },
+  "back": {
+    "text": "Berlin",
+    "details": "Berlin (/bərˈlɪn/; German pronunciation: [bɛɐ̯ˈliːn] ( listen)) is the capital city of Germany and one of the 16 states of Germany. With a population of 3.5 million people,[4] Berlin is Germany's largest city. It is the second most populous city proper and the seventh most populous urban area in the European Union.[5] Located in northeastern Germany on the River Spree, it is the center of the Berlin-Brandenburg Metropolitan Region, which has about 4.5 million residents from over 180 nations.[6][7][8][9] Due to its location in the European Plain, Berlin is influenced by a temperate seasonal climate. Around one third of the city's area is composed of forests, parks, gardens, rivers and lakes.["
+  },
+  "score": 7,
+  "favorite": true,
+  "original_id": 11,
+  "tags": [
+    "geography", "europe", "germany"
+  ]
+},
+{
+  "front": {
+    "text": "Spain",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/125px-Flag_of_Spain.svg.png"
+  },
+  "back": {
+    "text": "Madrid",
+    "details": "Madrid (English /məˈdrɪd/, Spanish: [maˈðɾið], locally: [maˈðɾiθ]) is the capital and largest city of Spain. The population of the city is roughly 3.3 million[4] and the entire population of the Madrid metropolitan area is calculated to be around 6.5 million. It is the third-largest city in the European Union, after London and Berlin, and its metropolitan area is the third-largest in the European Union after London and Paris.[5][6][7][8] The city spans a total of 604.3 km2 (233.3 sq mi)"
+  },
+  "score": 12,
+  "favorite": false,
+  "original_id": 12,
+  "tags": [
+    "geography", "europe", "spain"
+  ]
 }
-
-
-
-// JSON in DB - SAME AS JSON to front end
