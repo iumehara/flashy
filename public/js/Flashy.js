@@ -9,14 +9,11 @@ Flashy.prototype.render = function(container, type){
 	container.empty();
 		
 	var toolsContainer = $("<div/>", {"id":"tools"}).appendTo(container);
-	$("<div/>",{"class":"button back"}).click(function(ev){
-		window.location = "/";
-	}).appendTo(toolsContainer);
 	if( type === "creator" ){
-		$("<div/>",{"class":"button add"}).click(function(ev){
-			self.deck.add();
+		$("<div/>",{"class":"button fa fa-plus fa-1x"}).click(function(ev){
+			self.deck.addCard();
 		}).appendTo(toolsContainer);
-		$("<div/>",{"class":"button save"}).click(function(ev){
+		$("<div/>",{"class":"button fa fa-save fa-1x"}).click(function(ev){
 			self.deck.save();
 		}).appendTo(toolsContainer);
 		var name = $("<input/>", {
@@ -39,4 +36,5 @@ Flashy.prototype.render = function(container, type){
 	
 	$("<div/>", {"id":"deckTitle"}).text(this.deck.name).appendTo(self.toolsContainer);
 	this.deck.render(deckContainer, type);
+	this.deck.selectCard(0);
 };

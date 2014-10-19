@@ -61,6 +61,25 @@ Card.prototype.marshal = function(){
 	};
 };
 
+
+Card.default = function(){
+	return new Card({
+		id: null,
+		front: {
+			text: ""
+		},
+		back: {
+			text: ""
+		},
+		category: "",
+		favorite: false,
+		score: null,
+		original_id: null,
+		tags: []
+	});
+};
+
+
 /*
 (function(){
 	Card.primeTemplate();

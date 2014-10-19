@@ -19,6 +19,10 @@ function Deck(deck_json){
 
 Deck.prototype.render = function(deck_container, type){
 	var self = this;
+	this.deck_container = deck_container;
+	this.type = type;
+	
+	deck_container.empty();
 	
 	this.deck_slider = $("<div/>",{
 		"class":"deck_slider"
@@ -26,25 +30,28 @@ Deck.prototype.render = function(deck_container, type){
 	this.deck_slider.css("width", (960*this.cards.length)+"px");
 		
 	this.cards.forEach(function(card, idx){ 
-		card.shield = $("<div/>",{"class":"cardShield"}).appendTo(this.deck_slider);
-		if( idx !== 0){
-			$("<div/>",{"class":"navigation left","html":"<span>&lt;</span>"}).
-					appendTo(card.shield).
-					click(function(ev){
-						self.retreat();
-					});
-		}
-		card.render(card.shield, type); 
-		if( idx !== this.cards.length-1 ){
-			$("<div/>",{"class":"navigation right","html":"<span>&gt;</span>"}).
-					appendTo(card.shield).
-					click(function(ev){
-						self.advance();
-					});
-		}
+		self.renderCard(card, type, idx);
 	}, this);
-	
-	this.selectCard(0);
+};
+
+Deck.prototype.renderCard = function(card, type, idx){
+	var self = this;
+	card.shield = $("<div/>",{"class":"cardShield"}).appendTo(this.deck_slider);
+	if( idx !== 0){
+		$("<div/>",{"class":"navigation left","html":"<span>&lt;</span>"}).
+				appendTo(card.shield).
+				click(function(ev){
+					self.retreat();
+				});
+	}
+	card.render(card.shield, type); 
+	if( idx !== this.cards.length-1 ){
+		$("<div/>",{"class":"navigation right","html":"<span>&gt;</span>"}).
+				appendTo(card.shield).
+				click(function(ev){
+					self.advance();
+				});
+	}
 };
 
 Deck.prototype.renderSmall = function(deck_container){
@@ -84,6 +91,18 @@ Deck.prototype.retreat = function(){
 	}
 	this.selectCard(idx);
 };
+
+Deck.prototype.addCard = function(){
+	var card = Card.default();
+	this.cards.push(card);	
+	this.render(this.deck_container, this.type, this.cards.length-1);
+	var self = this;
+	self.selectCard(self.cards.length-1);
+};
+
+
+
+
 
 Deck.prototype.marshal = function(){
 	var ret = {
