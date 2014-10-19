@@ -175,7 +175,7 @@ p {
     width:480px;
 }
 
-.deck a {
+a {
     text-decoration:none;
     color:inherit;
 }
@@ -184,7 +184,11 @@ p {
     background-color:#FFC469;
 }
 
-.deck.statistics {
+.deck.data {
     font-size:8px;
     color:gray;
 }
+
+.
+
+
