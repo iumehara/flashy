@@ -9,15 +9,11 @@ var publicDirectory = new static.Server('./public');
 
 require('http').createServer(function(request, response) {
 	if( request.url === '/' ){
-		request.url = '/flashy/public/';
+		request.url = '/flashy/public/html/index.html';
 	}
 	
 	if(request.url.indexOf("/flashy/public") === 0){
 		request.url = request.url.substring(14);
-		if(request.url === '/'){
-			request.url = '/html/index.html';
-		}
-		
 		request.addListener('end', function() {
 			publicDirectory.serve(request, response, function(err, result) {
 				if (err) {

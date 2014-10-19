@@ -1,24 +1,153 @@
-.button{
-    display: block;
-    width: 48px;
-    height: 48px;
-    position: fixed;
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-.button.favorite {
-    background-image: url('/flashy/public/images/heartIcon.gif');
+#tools{
+    height: 72px;
+}
+
+.button{
+    display: block;
+    width: 36px;
+    height: 36px;
+    position:fixed;
+    margin-top:12px;
+}
+
+.button.favorite.on {
+    background-image: url('/flashy/public/images/favorite.png');
+    background-size: 36px 36px;
+    margin-right:12px;
+    background-position:center;
+    right: 0px;
+    top: 0px;
+}
+
+.button.favorite{
+    background-image: url('/flashy/public/images/unfavorite.png');
+    background-size: 36px 36px;
+    margin-right:12px;
+    background-position: center;
     right: 0px;
     top: 0px;
 }
 
 .button.menu {
-    background-image: url('/flashy/public/images/heartIcon.gif');
+    background-image: url('/flashy/public/images/menu.png');
+    background-size: 36px 36px;
+    margin-right:12px;
     right: 0px;
     top: 0px;
 }
 
 .button.back {
-    background-image: url('/flashy/public/images/back-icon.png');
+    background-image: url('/flashy/public/images/back_icon.png');
+    background-size: 36px 36px;
+    margin-left:12px;
     left: 0px;
     top: 0px;
+}
+
+
+
+
+
+
+#deckTitle {
+    left: 30%;
+    position:fixed;
+    font-size: 48px;
+    font-weight:bold;
+    text-align:bottom;
+}
+
+#deck{
+    width: 960px;
+    margin: 0px auto;
+}
+
+.deck_slider{
+    overflow: hidden;
+    position: relative;
+}
+
+.cardShield{
+    width: 960px;
+    height: 600px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.navigation{
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    top: 15%;
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.navigation.left{
+    left: 10px;
+}
+
+.navigation.right{
+    right: 10px;
+}
+
+
+.card{
+
+}
+
+.view{
+    width: 640px;
+    height: 480px;
+    margin: 0px auto;
+    cursor: pointer;
+    border: 1px solid #333;
+    text-align: center;
+    position: relative;
+}
+
+p {
+    text-align: center;
+}
+
+
+
+.view.stacked{
+    width: 360px;
+    height: 240px;
+}
+
+.header {
+    font-size: 8px;
+    color: #D3D3D3;
+}
+
+.view .text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    font-size: 20px;
+}
+
+.deck {
+    border-color: black;
+    border-width:2px;
+    text-align:center;
+}
+
+.deck a {
+    text-decoration:none;
+}
+
+.deck.statistics {
+    color:gray;
 }

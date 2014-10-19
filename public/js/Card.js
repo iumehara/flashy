@@ -1,21 +1,32 @@
 function Card(card_json){
+	this.id = card_json.id;
+	this.front = card_json.front;
+	this.back = card_json.back;
+	this.category = card_json.category;
+	this.favorite = card_json.favorite;
+	this.score = card_json.score;
+	this.original_id = card_json.original_id;
+	this.tags = card_json.tags;
 }
 
+jQuery.extend(Card, Base);
 
-Card.prototype.render = function(container){
-	renderer = function(container){
-		this.template = $(Card.template(this));
-		this.template.appendTo(container);
+
+
+Card.prototype.render = function(container, type){
+	var renderer = function(container){
+		this.view = $(Card.template({
+			card: this,
+			type: type
+		}));
+		this.view.appendTo(container);
 		
-		$(this.template).find(".top").addClass("show");
-		$(this.template).find(".view").click(function(){
-			if($(this.template).find(".top").hasClass("show")){
-				$(this.template).find(".bottom").addClass("show");
-				$(this.template).find(".top").removeClass("show");
-			} else {
-				$(this.template).find(".top").addClass("show");
-				$(this.template).find(".bottom").removeClass("show");
-			}
+		this.front.view = this.view.find(".front");
+		this.back.view = this.view.find(".back");
+		
+		var self = this;
+		this.view.click(function(ev){
+			self.toggle();
 		});
 	}.bind(this);
 	
@@ -28,15 +39,12 @@ Card.prototype.render = function(container){
 	}
 };
 
-
-Card.primeTemplate = function(callback){
-	$.get("/flashy/public/templates/card.hbs", null, function(source){
-		Card.template = Handlebars.compile(source);
-		if(callback){
-			callback();
-		}
-	});
+Card.prototype.toggle = function(){
+	this.front.view.toggle();
+	this.back.view.toggle();
 };
+
+
 
 /*
 (function(){
