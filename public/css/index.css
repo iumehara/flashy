@@ -160,13 +160,14 @@ p {
 
 
 .deck {
-    border: 2px solid;
+    border: 4px solid;
     border-color:black;
     border-radius:15px;
     overflow:hidden;
     display:inline-block;
     margin: 8px;
     padding:4px;
+    height:;
     width:360px;
 }
 
@@ -178,7 +179,7 @@ a {
 
 .deck h4 {
     text-align:center;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -193,14 +194,20 @@ a {
 }
 
 .deck.statistics{
+    padding:4px;
+    margin:4px;
+    width:75%;
     left:0px;
 }
 
 .deck.edit{
     border:2px solid;
     border-color:black;
+    text-align:center;
+    width:25%;
     margin:8px;
     padding:8px;
     right:0px;
+
 }
 
