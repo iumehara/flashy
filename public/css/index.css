@@ -120,6 +120,8 @@ p {
     text-align: center;
 }
 
+
+
 .view.stacked{
     width: 360px;
     height: 240px;
@@ -131,12 +133,16 @@ p {
 }
 
 .view p:nth-child(2) {
+    color: #D3D3D3;
+}
+
+.view .text {
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
+    transform: translateY(-100%);
+    font-size: 20px;
 }
 
 .deck {
@@ -162,5 +168,5 @@ p {
 
 .deck.statistics {
     font-size:8px;
-    font-color:gray;
+    color:gray;
 }
