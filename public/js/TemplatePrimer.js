@@ -7,7 +7,7 @@ TemplatePrimer = {
 			}
 		} else {
 			var self = this;
-			$.get("/flashy/public/templates/"+name+".hbs", null, function(source){
+			$.get("public/templates/"+name+".hbs", null, function(source){
 				if(callback){
 					self.templates[name] = Handlebars.compile(source);
 					callback(self.templates[name]);
