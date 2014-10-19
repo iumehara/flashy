@@ -1,16 +1,15 @@
-function Flashy( deck, type ){
-	this.type = type;
+function Flashy( deck ){
 	this.deck = deck;
 }
 
-Flashy.prototype.render = function(container){
+Flashy.prototype.render = function(container, type){
 	var self = this;
 		
 	var toolsContainer = $("<div/>", {"id":"tools"}).appendTo(container);
 	$("<div/>",{"class":"button back"}).click(function(ev){
 		window.location = "/";
 	}).appendTo(toolsContainer);
-	if( this.type === "creator" ){
+	if( type === "creator" ){
 		$("<div/>",{"class":"button add"}).click(function(ev){
 			self.deck.add();
 		}).appendTo(toolsContainer);
@@ -26,5 +25,5 @@ Flashy.prototype.render = function(container){
 	var deckContainer = $("<div/>", {"id":"deck"}).appendTo(container);
 	var name = $("<div/>", {"id":"deckTitle"}).text(this.deck.name).appendTo(toolsContainer);
 	
-	this.deck.render(deckContainer);
+	this.deck.render(deckContainer, type);
 };

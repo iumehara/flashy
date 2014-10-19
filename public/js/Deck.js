@@ -1,4 +1,4 @@
-function Deck(deck_json, type){
+function Deck(deck_json){
 	this.id = deck_json.id;
 	this.owner_id = deck_json.owner_id;
 	this.name = deck_json.name;
@@ -18,7 +18,7 @@ function Deck(deck_json, type){
 jQuery.extend(Deck, Base);
 
 
-Deck.prototype.render = function(deck_container){
+Deck.prototype.render = function(deck_container, type){
 	var self = this;
 	
 	this.deck_slider = $("<div/>",{
@@ -35,7 +35,7 @@ Deck.prototype.render = function(deck_container){
 						self.retreat();
 					});
 		}
-		card.render(card_shield); 
+		card.render(card_shield, type); 
 		if( idx !== this.cards.length-1 ){
 			$("<div/>",{"class":"navigation right","html":">"}).
 					appendTo(card_shield).
