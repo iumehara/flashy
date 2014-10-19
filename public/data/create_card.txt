@@ -3,7 +3,7 @@ CREATE TABLE cards (
 	content    JSON,
   created_at timestamp default CURRENT_TIMESTAMP
 );
-CREATE TABLE deck (
+CREATE TABLE decks (
   id         SERIAL,
 	content    JSON,
   created_at timestamp default CURRENT_TIMESTAMP

@@ -42,10 +42,8 @@ function create(request, response){
 		};
 	});
 	request.on('end', function(){
-		console.log(body);
 	  client.query('INSERT INTO cards(content) VALUES($1);', [body], function(err, result) {
-	    console.log(err);
-	    console.log(result);
+	  	response.setHeader('Content-Type', 'application/json');
 	  });
 	})
 };
@@ -59,7 +57,6 @@ function update(request, response){
 }
 
 exports.handle = function(request, response){
-	// var action = request.url.split("/")[2];
 	switch(request.method){
 		case "GET":
 			show(request, response);

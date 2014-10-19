@@ -1,17 +1,18 @@
+// JSON to FRONT END
 {
     "id": 5,
     "owner_id": 3,
-    "name": "Zo's Favorite presidents",
-    "description": "A list of my favorite presidents!",
+    "name": "World Geography",
+    "description": "A list of countries and capitals",
     "score": 30,
     "tags": [
-        "presidents", "politics", "US History"
+        "geography", "world"
     ],
     "cards": [
         {
             "id": 7,
             "front": {
-                "text": "Theodore Roosevelt",
+                "text": "Spain",
                 "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
             },
             "back": {
@@ -29,7 +30,7 @@
         {
             "id": 8,
             "front": {
-                "text": "Abraham Lincoln",
+                "text": "Germany",
                 "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Abraham_Lincoln_November_1863.jpg/486px-Abraham_Lincoln_November_1863.jpg"
             },
             "back": {
@@ -47,7 +48,7 @@
         {
             "id": 9,
             "front": {
-                "text": "Barack Obama",
+                "text": "France",
                 "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"
             },
             "back": {
@@ -62,5 +63,23 @@
                 "democrat", "harvard law school"
             ]
         }
+    ]
+}
+
+
+
+// JSON in DB
+{
+    "owner_id": 3,
+    "name": "World Geography",
+    "description": "A list of countries and capitals",
+    "score": 30,
+    "tags": [
+        "geography", "world"
+    ],
+    "card_ids": [
+        1, 2, 5
+    ],
+    "cards": [
     ]
 }
