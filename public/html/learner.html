@@ -32,11 +32,14 @@ and open the template in the editor.
         <!-- Executable JS -->
         <script type="text/javascript">
             $(document).ready(function(){
+                // Todo: Fetch Deck Data
                 jQuery.getJSON("/flashy/public/data/deck.json", null, function(deck){   
-                    var flashy = new Flashy("creator", deck);
+                    var flashy = new Flashy("learner", deck);
                     flashy.render( $("#main") );
                 });
-            });   
+            });  
         </script>
     </body>
+</html>
+
 </html>

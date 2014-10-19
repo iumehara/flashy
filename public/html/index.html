@@ -25,13 +25,17 @@ and open the template in the editor.
         
         <!-- Js -->
         <script type="text/javascript" src="/flashy/public/js/Flashy.js"></script>
+        <script type="text/javascript" src="/flashy/public/js/Base.js"></script>
         <script type="text/javascript" src="/flashy/public/js/Deck.js"></script>
-        <script type="text/javascript" src="/flashy/public/js/Card.js"></script>
+        <script type="text/javascript" src="/flashy/public/js/DeckList.js"></script>
 
         <!-- Executable JS -->
         <script type="text/javascript">
             $(document).ready(function(){
-                var flashy = new Flashy("player", $("#main"));
+                $.getJSON("/flashy/public/data/deck_list.json", function(data) {
+                    var decklist = new DeckList(data);
+                    decklist.render($("#main"));
+                });
             });   
         </script>
     </body>

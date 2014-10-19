@@ -1,17 +1,14 @@
-function DeckResults(){
-
+function DeckList(list_json) {
+	this.decks = [];
+	list_json.forEach(function(deck){
+		this.decks.push(new Deck(deck));
+	}, this);
 }
 
-function getList(){
-				$(document).ready(function(){
-				var results=[];
-				$.getJSON("data/deck_list.json", function(data){
-					for (i=0; i<results.length; i++){
-						var info = {};
-						info.name = data[i].name;
-						info.score = data[i].score;
-						results.push(info);
-					}
-				});
-			});
-}
+
+
+DeckList.prototype.render = function(container){
+	this.decks.forEach(function(deck){
+		deck.renderSmall(container);
+	});
+};
