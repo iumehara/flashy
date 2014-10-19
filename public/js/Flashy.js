@@ -36,5 +36,4 @@ Flashy.prototype.render = function(container){
 		name.appendTo(self.toolsContainer);
 		this.deck.render(this.deckContainer);
 	}.bind(this));
-
 };
