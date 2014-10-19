@@ -7,8 +7,11 @@ function Card(card_json){
 	this.score = card_json.score;
 	this.original_id = card_json.original_id;
 	this.tags = card_json.tags;
-
 }
+
+jQuery.extend(Card, Base);
+
+
 
 Card.prototype.render = function(container){
 	var renderer = function(container){
@@ -38,14 +41,7 @@ Card.prototype.toggle = function(){
 	this.back.view.toggle();
 };
 
-Card.primeTemplate = function(callback){
-	$.get("/flashy/public/templates/card.hbs", null, function(source){
-		Card.template = Handlebars.compile(source);
-		if(callback){
-			callback();
-		}
-	});
-};
+
 
 /*
 (function(){

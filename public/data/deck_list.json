@@ -1,65 +1,65 @@
 [
-	{
-		"deck_id" : 5,
-		"name" : "Presidents",
-		"score" : 10,
-		"difficulty": 3,
-		"tags" : [
-			"presidents", "politics", "US History"
-		]
-	},
-	{
-		"deck_id" : 6,
-		"name" : "Animals",
-		"score" : 8,
-		"difficulty": 2,
-		"tags" : [
-			"animals", "biology", "nature"
-		]
-	},
-	{
-		"deck_id" : 7,
-		"name" : "Chemical Reactions",
-		"score" : 12,
-		"difficulty": 6,
-		"tags" : [
-			"biology", "high school"
-		]
-	},
-	{
-		"deck_id" : 8,
-		"name" : "Countries and capitals",
-		"score" : 5,
-		"difficulty": 5,
-		"tags" : [
-			"countries", "capitals", "US", "politics"
-		]
-	},
-	{
-		"deck_id" : 9,
-		"name" : "Spanish",
-		"score" : 10,
-		"difficulty": 5,
-		"tags" : [
-			"spanish", "foreign languages", "Spain", "countries", "high school"
-		]
-	},
-	{
-		"deck_id" : 10,
-		"name" : "Famous Authors",
-		"score" : 5,
-		"difficulty": 4,
-		"tags" : [
-			"literature", "novels", "authors"
-		]
-	},
-	{
-		"deck_id" : 11,
-		"name" : "Objective-C",
-		"score" : 1,
-		"difficulty": 6,
-		"tags" : [
-			"programming", "objective-c", "computer sciencet"
-		]
-	}
+    {
+        "deck_id": 5,
+        "name": "Presidents",
+        "score": 10,
+        "difficulty": 3,
+        "tags": [
+            "presidents", "politics", "US History"
+        ]
+    },
+    {
+        "deck_id": 6,
+        "name": "Animals",
+        "score": 8,
+        "difficulty": 2,
+        "tags": [
+            "animals", "biology", "nature"
+        ]
+    },
+    {
+        "deck_id": 7,
+        "name": "Chemical Reactions",
+        "score": 12,
+        "difficulty": 6,
+        "tags": [
+            "biology", "high school"
+        ]
+    },
+    {
+        "deck_id": 8,
+        "name": "Countries and capitals",
+        "score": 5,
+        "difficulty": 5,
+        "tags": [
+            "countries", "capitals", "US", "politics"
+        ]
+    },
+    {
+        "deck_id": 9,
+        "name": "Spanish",
+        "score": 10,
+        "difficulty": 5,
+        "tags": [
+            "spanish", "foreign languages", "Spain", "countries", "high school"
+        ]
+    },
+    {
+        "deck_id": 10,
+        "name": "Famous Authors",
+        "score": 5,
+        "difficulty": 4,
+        "tags": [
+            "literature", "novels", "authors"
+        ]
+    },
+    {
+        "deck_id": 11,
+        "name": "Objective-C",
+        "score": 1,
+        "difficulty": 6,
+        "tags": [
+            "programming", "objective-c", "computer sciencet"
+        ]
+    }
 ]

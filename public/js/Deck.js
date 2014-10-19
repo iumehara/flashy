@@ -4,13 +4,20 @@ function Deck(deck_json){
 	this.name = deck_json.name;
 	this.description = deck_json.description;
 	this.score = deck_json.score;
+	this.difficulty = deck_json.difficulty;
 	this.tags = deck_json.tags;
 	
-	this.cards = [];
-	deck_json.cards.forEach(function(card_json){
-		this.cards.push(new Card(card_json));
-	}, this);
+	if(deck_json.cards){
+		this.cards = [];
+		deck_json.cards.forEach(function(card_json){
+			this.cards.push(new Card(card_json));
+		}, this);
+	}
 }
+
+jQuery.extend(Deck, Base);
+
+
 
 Deck.prototype.render = function(deck_container){
 	$("<h2/>",{html: this.name}).appendTo(deck_container);
@@ -20,7 +27,7 @@ Deck.prototype.render = function(deck_container){
 	this.deck_slider = $("<div/>",{
 		"class":"deck_slider"
 	}).appendTo(deck_container);
-	this.deck_slider.css("width",(960*this.cards.length)+"px");
+	this.deck_slider.css("width", (960*this.cards.length)+"px");
 		
 	this.cards.forEach(function(card, idx){ 
 		var card_shield = $("<div/>",{"class":"cardShield"}).appendTo(this.deck_slider);
@@ -43,6 +50,12 @@ Deck.prototype.render = function(deck_container){
 	
 	this.selectCard(0);
 };
+
+Deck.prototype.renderSmall = function(deck_container){
+	$("<h2/>",{html: this.name}).appendTo(deck_container);
+};
+
+
 
 Deck.prototype.selectCard = function(idx){
 	this.selectedIndex = idx;
