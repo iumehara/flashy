@@ -32,7 +32,7 @@ and open the template in the editor.
         <!-- Executable JS -->
         <script type="text/javascript">
             $(document).ready(function(){
-                Deck.getAll("nonsense user id").then(function(decklist) {
+                DeckList.get("nonsense user id").then(function(decklist) {
                     decklist.render($("#main"));
                 });
             });   

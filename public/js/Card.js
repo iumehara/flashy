@@ -40,6 +40,20 @@ Card.prototype.toggle = function(){
 
 
 
+
+Card.prototype.marshal = function(){
+	return {
+		id: this.id,
+		front: this.front,
+		back: this.back,
+		category: this.category,
+		favorite: this.favorite,
+		score: this.score,
+		original_id: this.original_id,
+		tags: this.tags
+	};
+};
+
 /*
 (function(){
 	Card.primeTemplate();

@@ -93,7 +93,29 @@ Deck.prototype.retreat = function(){
 	this.selectCard(idx);
 };
 
+Deck.prototype.marshal = function(){
+	var ret = {
+		id: this.id,
+		owner_id: this.owner_id,
+		name: this.name,
+		description: this.description,
+		score: this.score,
+		difficulty: this.difficulty,
+		tags: this.tags,
+		cards: []
+	};
+	this.cards.forEach(function(card){
+		ret.cards.push(card.marshal());
+	});
+};
 
+Deck.prototype.save = function(){
+	return new Promise(function(success, error){
+		$.post("/decks/"+this.id, this.marshal(), function(data){
+			success(data);
+		}, "application/json");
+	});
+};
 
 
 

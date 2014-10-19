@@ -13,41 +13,33 @@ body{
     width: 36px;
     height: 36px;
     position:fixed;
-    margin-top:12px;
+    margin: 12px;
     cursor:pointer;
+    background-size: 36px 36px;
+    right: 0px;
+    top: 0px;
 
 }
 
 .button.favorite.on {
     background-image: url('/flashy/public/images/favorite.png');
-    background-size: 36px 36px;
-    margin-right:12px;
-    right: 0px;
-    top: 0px;
+
 }
 
 .button.favorite{
     background-image: url('/flashy/public/images/unfavorite.png');
-    background-size: 36px 36px;
-    margin-right:12px;
-    right: 0px;
-    top: 0px;
+}
+
+.button.save{
+    
 }
 
 .button.menu {
     background-image: url('/flashy/public/images/menu.png');
-    background-size: 36px 36px;
-    margin-right:12px;
-    right: 0px;
-    top: 0px;
 }
 
 .button.back {
     background-image: url('/flashy/public/images/back_icon.png');
-    background-size: 36px 36px;
-    margin-left:12px;
-    left: 0px;
-    top: 0px;
     border:2px solid;
     border-color:black;
 }
