@@ -35,6 +35,7 @@ function show(request, response){
 };
 
 function create(request, response){
+	console.log("===== CREATE =====");
 	var body = '';
 	request.on('data', function (data) {
 		body += data;
@@ -50,6 +51,7 @@ function create(request, response){
 };
 
 function update(request, response){
+	console.log("===== UPDATE =====");
 	var card_id = request.url.split("/")[2];
 	var body = '';
 	request.on('data', function (data) {
