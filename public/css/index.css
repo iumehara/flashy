@@ -14,6 +14,7 @@ body{
     height: 36px;
     position:fixed;
     margin-top:12px;
+
 }
 
 .button.favorite.on {
@@ -48,6 +49,8 @@ body{
     margin-left:12px;
     left: 0px;
     top: 0px;
+    border:2px solid;
+    border-color:black;
 }
 
 
@@ -85,7 +88,7 @@ body{
     width: 10%;
     height: 100%;
     position: absolute;
-    top: 15%;
+    top: 40%;
     cursor: pointer;
     font-size: 32px;
 }
@@ -127,34 +130,37 @@ p {
     font-color: #D3D3D3;
 }
 
-<<<<<<< HEAD
-.back p:nth-child(1) {
-    font-size: 14px;
-    top: 50%;
-}
-
-.front p:nth-child(1) {
-=======
 .view p:nth-child(2) {
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
->>>>>>> b7aee16e799c1c1ec215ed1c0af8a0d523a700b1
     font-size: 16px;
 }
 
 .deck {
-    border-color: black;
-    border-width:2px;
+    border: 2px solid;
+    border-color:black;
+    border-radius:15px;
     text-align:center;
+    overflow:hidden;
+    display:inline-block;
+    margin: 8px;
+    padding:4px;
 }
 
 .deck a {
     text-decoration:none;
+    color:inherit;
+}
+
+.deck.title {
+    font-color:black;
+    font-size:16px;
 }
 
 .deck.statistics {
+    font-size:8px;
     font-color:gray;
 }
