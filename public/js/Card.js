@@ -29,6 +29,13 @@ Card.prototype.render = function(container, type){
 			this.view.click(function(ev){
 				self.toggle();
 			});
+		} else if( type === "creator"){
+			this.view.find(".view.front .text").change(function(){
+				self.front.text = this.value;
+			});
+			this.view.find(".view.back .text").change(function(){
+				self.back.text = this.value;
+			});
 		}
 	}.bind(this));
 };

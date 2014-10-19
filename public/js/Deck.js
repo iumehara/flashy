@@ -52,14 +52,6 @@ Deck.prototype.renderSmall = function(deck_container){
 		this.view = $(template(this));
 		this.view.appendTo(deck_container);
 	}.bind(this));
-
-	if(Deck.template){
-		renderer(deck_container);
-	} else {
-		Deck.primeTemplate(function(){
-			renderer(deck_container);
-		});
-	}
 };
 
 
@@ -110,8 +102,9 @@ Deck.prototype.marshal = function(){
 };
 
 Deck.prototype.save = function(){
+	var url = "/decks/"+this.id;
 	return new Promise(function(success, error){
-		$.post("/decks/"+this.id, this.marshal(), function(data){
+		$.post( url, this.marshal(), function(data){
 			success(data);
 		}, "application/json");
 	});
@@ -120,8 +113,8 @@ Deck.prototype.save = function(){
 
 
 Deck.get = function(id){
-	var url = "/decks/"+id;
-	var url = "/flashy/public/data/deck.json";
+	var url = "http://192.168.2.87:3000/decks/"+id;
+	//var url = "/flashy/public/data/deck.json";
 	return new Promise(function(success, error){
 		$.getJSON( url, function(deck_json){
             var deck = new Deck(deck_json);

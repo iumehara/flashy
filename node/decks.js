@@ -1,3 +1,4 @@
+/*
 var http = require('http');
 var pg = require('pg');
 var conString = "postgres://flashy:flashflash@localhost:5432/flashy";
@@ -85,3 +86,4 @@ exports.handle = function(request, response){
 	}
 	//request.resume();
 };
+*/

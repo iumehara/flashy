@@ -1,4 +1,4 @@
-// JSON to FRONT END
+
 {
     "id": 5,
     "owner_id": 3,
@@ -63,23 +63,5 @@
                 "democrat", "harvard law school"
             ]
         }
-    ]
-}
-
-
-
-// JSON in DB
-{
-    "owner_id": 3,
-    "name": "World Geography",
-    "description": "A list of countries and capitals",
-    "score": 30,
-    "tags": [
-        "geography", "world"
-    ],
-    "card_ids": [
-        1, 2, 5
-    ],
-    "cards": [
     ]
 }
