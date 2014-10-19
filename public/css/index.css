@@ -6,6 +6,13 @@ body{
 
 #tools{
     height: 48px;
+    text-align: center;
+}
+
+.buttonBox{
+    position: absolute;
+    right: 0px;
+    top: 0px;
 }
 
 .button{
@@ -15,11 +22,10 @@ body{
 }
 
 #deckTitle {
-    left: 30%;
-    position:fixed;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+    margin: 0px auto;
 }
 
 #deck{

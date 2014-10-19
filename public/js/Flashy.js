@@ -9,13 +9,15 @@ Flashy.prototype.render = function(container, type){
 	container.empty();
 		
 	var toolsContainer = $("<div/>", {"id":"tools"}).appendTo(container);
+	var buttonBox = $("<div/>", {"class":"buttonBox"}).appendTo(toolsContainer);
+	
 	if( type === "creator" ){
 		$("<div/>",{"class":"button fa fa-plus fa-1x"}).click(function(ev){
 			self.deck.addCard();
-		}).appendTo(toolsContainer);
+		}).appendTo(buttonBox);
 		$("<div/>",{"class":"button fa fa-save fa-1x"}).click(function(ev){
 			self.deck.save();
-		}).appendTo(toolsContainer);
+		}).appendTo(buttonBox);
 		var name = $("<input/>", {
 			"id":"deckTitle", 
 			"type": "text", 
