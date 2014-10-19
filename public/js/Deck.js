@@ -13,8 +13,6 @@ function Deck(deck_json){
 }
 
 Deck.prototype.render = function(deck_container){
-	$("<h2/>",{html: this.name}).appendTo(deck_container);
-	
 	var self = this;
 	
 	this.deck_slider = $("<div/>",{

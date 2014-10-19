@@ -21,8 +21,11 @@ function Flashy( type, container){
 	makeTools(this.toolsContainer);
 	
 	this.deckContainer = $("<div/>", {"id":"deck"}).appendTo(container);
+	var self = this;
 	jQuery.getJSON("/flashy/public/data/deck.json", null, function(deck){
 		this.deck = new Deck(deck);
+		var name = $("<div/>", {"id":"deckTitle"}).text(this.deck.name);
+		name.appendTo(self.toolsContainer);
 		this.deck.render(this.deckContainer);
 	}.bind(this));
 	

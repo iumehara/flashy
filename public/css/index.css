@@ -9,16 +9,16 @@ body{
 
 .button{
     display: block;
-    width: 48px;
-    height: 48px;
-    position: fixed;
-    margin: 12px;
-
+    width: 36px;
+    height: 36px;
+    position:fixed;
+    margin-top:12px;
 }
 
 .button.favorite.on {
     background-image: url('/flashy/public/images/favorite.png');
-    background-size: 48px 48px;
+    background-size: 36px 36px;
+    margin-right:12px;
     background-position:center;
     right: 0px;
     top: 0px;
@@ -26,7 +26,8 @@ body{
 
 .button.favorite{
     background-image: url('/flashy/public/images/unfavorite.png');
-    background-size: 48px 48px;
+    background-size: 36px 36px;
+    margin-right:12px;
     background-position: center;
     right: 0px;
     top: 0px;
@@ -34,17 +35,27 @@ body{
 }
 
 .button.menu {
-    background-image: url('/flashy/public/images/heartIcon.gif');
-    background-size: 48px 48px;
+    background-image: url('/flashy/public/images/menu.png');
+    background-size: 36px 36px;
+    margin-right:12px;
     right: 0px;
     top: 0px;
 }
 
 .button.back {
     background-image: url('/flashy/public/images/back_icon.png');
-    background-size: 48px 48px;
+    background-size: 36px 36px;
+    margin-left:12px;
     left: 0px;
     top: 0px;
+}
+
+#deckTitle {
+    left: 30%;
+    position:fixed;
+    font-size: 48px;
+    font-weight:bold;
+    text-align:bottom;
 }
 
 #deck{
@@ -66,7 +77,7 @@ body{
 }
 
 .navigation{
-    width: 80px;
+    width: 10%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -111,16 +122,12 @@ p {
 
 .back p:n-child(1) {
     font-size: 14px;
-    position: relative;
     top: 50%;
-    transform: translateY(-50%);
 }
 
 .front p:n-child(1) {
     font-size: 16px;
     font-weight:bold;
-    position: relative;
     top: 50%;
-    transform: translateY(-50%);
 }
 
