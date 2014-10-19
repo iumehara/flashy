@@ -61,7 +61,7 @@ Deck.prototype.selectCard = function(idx){
 		this.cards[this.selectedIndex].shield.removeClass("active");
 	}
 	this.selectedIndex = idx;
-	this.deck_slider.animate({"left": "-"+(idx*960)+"px"}, 300);
+	this.deck_slider.animate({"left": "-"+(idx*722)+"px"}, 300);
 	this.cards[idx].shield.addClass("active");
 };
 
