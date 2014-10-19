@@ -41,8 +41,15 @@ Card.prototype.render = function(container, type){
 };
 
 Card.prototype.toggle = function(){
-	this.front.view.toggle();
-	this.back.view.toggle();
+	if( this.toggled ){
+		this.toggled = false;
+		this.front.view.animate({"opacity": "1"}, 300);
+		this.back.view.animate({"opacity": "0"}, 300);
+	} else {
+		this.toggled = true;
+		this.front.view.animate({"opacity": "0"}, 300);
+		this.back.view.animate({"opacity": "1"}, 300);
+	}
 };
 
 
