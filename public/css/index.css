@@ -159,35 +159,48 @@ p {
 }
 
 
-
-
-
-
 .deck {
     border: 2px solid;
     border-color:black;
     border-radius:15px;
-    text-align:center;
     overflow:hidden;
     display:inline-block;
     margin: 8px;
     padding:4px;
-    width:480px;
+    width:360px;
 }
 
 a {
     text-decoration:none;
     color:inherit;
+    font-size: inherit;
+}
+
+.deck h4 {
+    text-align:center;
+    font-size: 36px;
+    font-weight: bold;
 }
 
 .deck:hover {
     background-color:#FFC469;
 }
 
-.deck.data {
+.deck.statistics.data {
+    display:table;
     font-size:8px;
     color:gray;
 }
 
+.deck.statistics{
+    left:0px;
+}
 
+.deck.edit{
+    border:2px solid;
+    border-color:black;
+    margin:8px;
+    padding:8px;
+    right:0px;
+}
 
