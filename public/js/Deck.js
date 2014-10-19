@@ -49,7 +49,18 @@ Deck.prototype.render = function(deck_container){
 };
 
 Deck.prototype.renderSmall = function(deck_container){
-	$("<h2/>",{html: this.name}).appendTo(deck_container);
+	var renderer = function(){
+		this.view = $(Deck.template(this));
+		this.view.appendTo(deck_container);
+	}.bind(this);
+	
+	if(Deck.template){
+		renderer(deck_container);
+	} else {
+		Deck.primeTemplate(function(){
+			renderer(deck_container);
+		});
+	}
 };
 
 
