@@ -1,33 +1,29 @@
-function Flashy( type, deck ){
-	this.type = type;
+function Flashy( deck ){
 	this.deck = deck;
 }
 
-Flashy.prototype.render = function(container){
-	function makeTools(toolsContainer){
-		var self = this;
+Flashy.prototype.render = function(container, type){
+	var self = this;
 		
-		$("<div/>",{"class":"button back"}).click(function(ev){
-			window.location = "/";
+	var toolsContainer = $("<div/>", {"id":"tools"}).appendTo(container);
+	$("<div/>",{"class":"button back"}).click(function(ev){
+		window.location = "/";
+	}).appendTo(toolsContainer);
+	if( type === "creator" ){
+		$("<div/>",{"class":"button add"}).click(function(ev){
+			self.deck.add();
 		}).appendTo(toolsContainer);
-		
-		if( this.type === "creator" ){
-			$("<div/>",{"class":"button add"}).click(function(ev){
-				self.deck.add();
-			}).appendTo(toolsContainer);
-			$("<div/>",{"class":"button save"}).click(function(ev){
-				self.deck.save();
-			}).appendTo(toolsContainer);
-		} else {
-			$("<div/>",{"class":"button favorite"}).click(function(ev){
-				$(this).toggleClass("on");
-			}).appendTo(toolsContainer);
-		}
+		$("<div/>",{"class":"button save"}).click(function(ev){
+			self.deck.save();
+		}).appendTo(toolsContainer);
+	} else {
+		$("<div/>",{"class":"button favorite"}).click(function(ev){
+			$(this).toggleClass("on");
+		}).appendTo(toolsContainer);
 	}
 	
-	this.toolsContainer = $("<div/>", {"id":"tools"}).appendTo(container);
-	makeTools(this.toolsContainer);
-	
+	var deckContainer = $("<div/>", {"id":"deck"}).appendTo(container);
+	var name = $("<div/>", {"id":"deckTitle"}).text(this.deck.name).appendTo(toolsContainer);
 	this.deckContainer = $("<div/>", {"id":"deck"}).appendTo(container);
 	var self = this;
 	jQuery.getJSON("/flashy/public/data/deck.json", null, function(deck){
@@ -36,4 +32,5 @@ Flashy.prototype.render = function(container){
 		name.appendTo(self.toolsContainer);
 		this.deck.render(this.deckContainer);
 	}.bind(this));
+
 };

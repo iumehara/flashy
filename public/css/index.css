@@ -33,7 +33,6 @@ body{
     right: 0px;
     top: 0px;
 }
-}
 
 .button.menu {
     background-image: url('/flashy/public/images/menu.png');
@@ -50,6 +49,11 @@ body{
     left: 0px;
     top: 0px;
 }
+
+
+
+
+
 
 #deckTitle {
     left: 30%;
@@ -87,24 +91,26 @@ body{
 }
 
 .navigation.left{
-    left: 0;
+    left: 10px;
 }
 
 .navigation.right{
-    right: 0;
+    right: 10px;
 }
+
 
 .card{
 
 }
 
 .view{
-    width: 360px;
-    height: 240px;
+    width: 640px;
+    height: 480px;
     margin: 0px auto;
     cursor: pointer;
     border: 1px solid #333;
     text-align: center;
+    position: relative;
 }
 
 p {
@@ -118,18 +124,25 @@ p {
 
 .header {
     font-size: 8px;
-    font-color: D3D3D3;
+    font-color: #D3D3D3;
 }
 
+<<<<<<< HEAD
 .back p:nth-child(1) {
     font-size: 14px;
     top: 50%;
 }
 
 .front p:nth-child(1) {
-    font-size: 16px;
-    font-weight:bold;
+=======
+.view p:nth-child(2) {
+    position: absolute;
+    left: 0;
+    right: 0;
     top: 50%;
+    transform: translateY(-50%);
+>>>>>>> b7aee16e799c1c1ec215ed1c0af8a0d523a700b1
+    font-size: 16px;
 }
 
 .deck {

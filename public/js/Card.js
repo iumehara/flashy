@@ -13,9 +13,12 @@ jQuery.extend(Card, Base);
 
 
 
-Card.prototype.render = function(container){
+Card.prototype.render = function(container, type){
 	var renderer = function(container){
-		this.view = $(Card.template(this));
+		this.view = $(Card.template({
+			card: this,
+			type: type
+		}));
 		this.view.appendTo(container);
 		
 		this.front.view = this.view.find(".front");
