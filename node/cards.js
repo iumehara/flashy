@@ -25,8 +25,11 @@ var handleError = function(err, res) {
 };
 
 function show(request, response){
-  client.query('SELECT * FROM cards', function(err, result) {
-    console.log(result);
+	var id = request.url.split("/")[2];
+  client.query('SELECT content FROM cards WHERE id = $1', [id], function(err, result) {
+  	response.setHeader('Content-Type', 'application/json');
+  	response.write(JSON.stringify(result["rows"][0]["content"]));
+  	response.end();
   });
 };
 
@@ -39,10 +42,8 @@ function create(request, response){
 		};
 	});
 	request.on('end', function(){
-		console.log("===============");
 		console.log(body);
-		console.log("===============");
-	  client.query('INSERT INTO cards VALUES($1);', [body], function(err, result) {
+	  client.query('INSERT INTO cards(content) VALUES($1);', [body], function(err, result) {
 	    console.log(err);
 	    console.log(result);
 	  });
@@ -52,7 +53,7 @@ function create(request, response){
 function update(request, response){
 	$content = '{ "test-key" : "test-value" }'
 	console.log($content);
-  client.query('INSERT INTO cards (CONTENT) VALUES ($content) ', function(err, result) {
+  client.query('INSERT INTO cards (body) VALUES ($content) ', function(err, result) {
     console.log(result);
   });
 }
@@ -67,4 +68,5 @@ exports.handle = function(request, response){
 			create(request, response);
 			break;
 	}
+	request.resume();
 };
