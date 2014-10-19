@@ -120,8 +120,9 @@ p {
 
 
 .view.stacked{
-    width: 360px;
+    width: 520px;
     height: 240px;
+    margin-bottom: 10px;
 }
 
 .header {
@@ -136,6 +137,18 @@ p {
     top: 50%;
     transform: translateY(-100%);
     font-size: 20px;
+}
+
+.view.stacked textarea.text, .view.stacked input.text{
+    width: 480px;
+    left: 17px;
+    right: 17px;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: gray;
+    padding: 2px;
+    font-family: monospace;
+    transform: translateY(-50%);
 }
 
 .deck {
