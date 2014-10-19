@@ -5,8 +5,7 @@ body{
 }
 
 #tools{
-    height: 50px;
-    background-color: #333;
+    height: 72px;
 }
 
 .button{
@@ -14,18 +13,22 @@ body{
     width: 48px;
     height: 48px;
     position: fixed;
+    margin: 12px;
+
 }
 
-.button.favorite {
+.button.favorite.on {
     background-image: url('/flashy/public/images/favorite.png');
     background-size: 48px 48px;
+    background-position:center;
     right: 0px;
     top: 0px;
 }
 
-.button.unfavorite{
+.button.favorite{
     background-image: url('/flashy/public/images/unfavorite.png');
     background-size: 48px 48px;
+    background-position: center;
     right: 0px;
     top: 0px;
 }
@@ -101,25 +104,24 @@ p {
     width: 360px;
     height: 240px;
 }
-.material {
-}
 
 .header {
     font-size: 8px;
     font-color: D3D3D3;
 }
 
-.back p:n-child(2) {
+.back p:n-child(1) {
     font-size: 14px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.front p:n-child(2) {
+.front p:n-child(1) {
     font-size: 16px;
     font-weight:bold;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
+
