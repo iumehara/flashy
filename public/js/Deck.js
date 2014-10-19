@@ -1,4 +1,4 @@
-function Deck(deck_json){
+function Deck(deck_json, type){
 	this.id = deck_json.id;
 	this.owner_id = deck_json.owner_id;
 	this.name = deck_json.name;

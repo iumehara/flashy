@@ -49,8 +49,8 @@ and open the template in the editor.
 
                 // Todo: Use Deck Id to Get Deck
                 jQuery.getJSON("/flashy/public/data/deck.json", null, function(deck_json) {
-                    var deck = new Deck(deck_json);
-                    var flashy = new Flashy(flashy_type, deck);
+                    var deck = new Deck(deck_json, flashy_type);
+                    var flashy = new Flashy(deck, flashy_type);
                     flashy.render($("#main"));
                 });
             });
