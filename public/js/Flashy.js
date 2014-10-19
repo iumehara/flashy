@@ -16,10 +16,12 @@ Flashy.prototype.render = function(container, type){
 		$("<div/>",{"class":"button save"}).click(function(ev){
 			self.deck.save();
 		}).appendTo(toolsContainer);
-	} else {
+	} else if ( type === "learner" ) {
 		$("<div/>",{"class":"button favorite"}).click(function(ev){
 			$(this).toggleClass("on");
 		}).appendTo(toolsContainer);
+	} else { // type === "player"
+		
 	}
 	
 	var deckContainer = $("<div/>", {"id":"deck"}).appendTo(container);

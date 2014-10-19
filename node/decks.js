@@ -1,3 +1,4 @@
+/*
 var http = require('http');
 var pg = require('pg');
 var conString = "postgres://flashy:flashflash@localhost:5432/flashy";
@@ -40,13 +41,10 @@ function show(request, response){
 	  client.query('SELECT * FROM cards WHERE id = ANY($1)', [card_ids], function(err, result) {
 			result["rows"].forEach(function(card){
 				deck_content["cards"].push(card);
+				response.write(JSON.stringify(deck_content));
+				response.end();
 			});
-			console.log("=== DECK ===");
-			console.log(deck_content);
-		});
-  	response.setHeader('Content-Type', 'application/json');
-  	response.write(JSON.stringify(deck_content));
-  	response.end();
+		});  		
   });	
 }
 
@@ -73,6 +71,7 @@ function update(request, response){
 
 
 exports.handle = function(request, response){
+	response.setHeader('Content-Type', 'application/json');
 	switch(request.method){
 		case "GET":
 			if (request.url.split("/")[2] != null){
@@ -85,5 +84,6 @@ exports.handle = function(request, response){
 			create(request, response);
 			break;
 	}
-	request.resume();
+	//request.resume();
 };
+*/
