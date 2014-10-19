@@ -130,7 +130,7 @@ p {
 
 .header {
     font-size: 8px;
-    font-color: #D3D3D3;
+    color: #D3D3D3;
 }
 
 .view p:nth-child(2) {
