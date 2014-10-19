@@ -123,8 +123,10 @@ p {
     left: 0;
     right: 0;
     top: 50%;
-    transform: translateY(-70%);
+    transform: translateY(-50%);
     font-size: 20px;
+    margin: 0px 100px;
+    line-height: 24px;
 }
 
 .view.stacked textarea.text, .view.stacked input.text{
