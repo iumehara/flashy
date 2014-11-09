@@ -1,5 +1,6 @@
 function Flashy( deck ){
 	this.deck = deck;
+	fireStarter();
 }
 
 Flashy.prototype.render = function(container, type){
@@ -40,3 +41,24 @@ Flashy.prototype.render = function(container, type){
 	this.deck.render(deckContainer, type);
 	this.deck.selectCard(0);
 };
+
+
+function fireStarter() {
+
+	var myFirebaseRef = new Firebase("https://flashy.firebaseio.com/");
+
+	myFirebaseRef.set({
+	  title: "Hello World!",
+	  author: "Firebase",
+	  location: {
+	    city: "San Francisco",
+	    state: "California",
+	    zip: 94103
+	  }
+	});
+
+	myFirebaseRef.child("location/city").on("value", function(snapshot) {
+	  alert(snapshot.val());  // Alerts "San Francisco"
+	});
+}
+
