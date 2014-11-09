@@ -9,7 +9,7 @@ var publicDirectory = new static.Server('./public');
 require('http').createServer(function(request, response) {
 	response.setHeader('Access-Control-Allow-Origin', '*');
 	if( request.url === '/' ){
-		request.url = '/flashy/public/html/index.html';
+		request.url = 'html/index.html';
 	}
 	
 	if(request.url.indexOf("/flashy/public") === 0){

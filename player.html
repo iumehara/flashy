@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Flashy</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/index.css"></link>
+        <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+
+        <div id="main"></div>
+
+
+        <!-- Lib -->
+        <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="lib/handlebars-v2.0.0.js"></script>
+
+
+        <!-- Js -->
+        <script type="text/javascript" src="js/Flashy.js"></script>
+        <script type="text/javascript" src="js/TemplatePrimer.js"></script>
+        <script type="text/javascript" src="js/Deck.js"></script>
+        <script type="text/javascript" src="js/Card.js"></script>
+
+        <!-- Executable JS -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var deck_id = "0";
+                var flashy_type = "player";
+                var params = window.location.search;
+                if (params) {
+                    params = params.substring(1).split("&");
+                    params.forEach(function(param){
+                        var kv = param.split("=");
+                        if(kv[0] === "type"){
+                            flashy_type = kv[1];
+                        } else if(kv[0] === "id"){
+                            deck_id = kv[1];
+                        }
+                    }, this);
+                }
+
+                // Todo: Use Deck Id to Get Deck
+                Deck.get(deck_id).then( function(deck) {
+                    var flashy = new Flashy(deck);
+                    flashy.render($("#main"), flashy_type);
+                });
+            });
+        </script>
+    </body>
+</html>
