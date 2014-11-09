@@ -1,0 +1,57 @@
+// USER
+{
+	"bobby1" : {
+		"name": "Bob Anderson",
+		"description": "I'm a teacher from Utah!",
+		"decks": {
+			"lkasdf*asd83": true,
+			"pdasdf*a9378": true,
+			"d4asdf*asd83": true
+		}
+	}
+}
+
+// CARD
+{
+	"lkasdf*asd83": {		
+    "front": {
+        "text": "Theodore Roosevelt",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
+    },
+    "back": {
+        "text": "26th president of the US.",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
+    },
+    "original_id": 3,
+    "contributers": {
+    	"1": "bobby",
+    	"2": "funnyjimmy"
+    }
+	}
+}
+
+// DECK
+{
+	"lkasdf*asd83": {		
+	  "name": "US Presidents",
+	  "description": "A list of my favorite presidents!",
+	  "score": 30,
+	  "tags": {
+	    "presidents": true,
+	    "politics": true,
+	    "US History": true
+	  },
+	  "cards": {
+	  	"1": ";alsdkfj;as",
+	  	"2": ";alsdkfj;as",
+	  	"3": ";alsdkfj;as"
+	  },
+    "contributers": {
+    	"1": "bobby",
+    	"2": "funnyjimmy"
+    }
+	}
+}
+
+// contributers: first, the creator is added as #1. Then, all subsequent copiers are added onto list in cooy-time order.
+

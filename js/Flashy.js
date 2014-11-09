@@ -47,18 +47,29 @@ function fireStarter() {
 
 	var myFirebaseRef = new Firebase("https://flashy.firebaseio.com/");
 
-	myFirebaseRef.set({
-	  title: "Hello World!",
-	  author: "Firebase",
-	  location: {
-	    city: "San Francisco",
-	    state: "California",
-	    zip: 94103
-	  }
-	});
+	// myFirebaseRef.set({
+	//   title: "Hello World!",
+	//   author: "Firebase",
+	//   location: {
+	//     city: "San Francisco",
+	//     state: "California",
+	//     zip: 94103
+	//   }
+	// });
 
-	myFirebaseRef.child("location/city").on("value", function(snapshot) {
-	  alert(snapshot.val());  // Alerts "San Francisco"
-	});
+	// myFirebaseRef.update({
+	// 	"cards": {"New York": "hello"}
+	// })
+	// myFirebaseRef.child("location").update({
+	// 	"city": "New York"
+	// })
+
+	myFirebaseRef.child("users").push({
+		"city": "New York"
+	})
+
+	// myFirebaseRef.child("location/city").on("value", function(snapshot) {
+	//   alert(snapshot.val());  // Alerts "San Francisco"
+	// });
 }
 
