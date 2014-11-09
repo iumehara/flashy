@@ -1,39 +1,27 @@
 var static = require('node-static'),
-	util = require('util'),
-	cards = require('./node/cards'),
-	decks = require('./node/decks')
+	util = require('util')
 	;
 
-var publicDirectory = new static.Server('./public');
+var publicDirectory = new static.Server('.');
 
 require('http').createServer(function(request, response) {
 	response.setHeader('Access-Control-Allow-Origin', '*');
-	if( request.url === '/' ){
-		request.url = 'html/index.html';
-	}
+	console.log(request.url);
 	
-	if(request.url.indexOf("/flashy/public") === 0){
-		request.url = request.url.substring(14);
-		request.addListener('end', function() {
-			publicDirectory.serve(request, response, function(err, result) {
-				if (err && err.message) {
-					console.error('Error serving %s - %s', request.url, err.message);
-					if (err.status === 404 || err.status === 500) {
-						publicDirectory.serveFile(util.format('/%d.html', err.status), err.status, {}, request, response);
-					} else {
-						//response.writeHead(err.status, err.headers);
-						//response.end();
-					}
+	request.addListener('end', function() {
+		publicDirectory.serve(request, response, function(err, result) {
+			if (err && err.message) {
+				console.error('Error serving %s - %s', request.url, err.message);
+				if (err.status === 404 || err.status === 500) {
+					publicDirectory.serveFile(util.format('/%d.html', err.status), err.status, {}, request, response);
 				} else {
-					console.log('%s - %s', request.url, response.message);
+					//response.writeHead(err.status, err.headers);
+					//response.end();
 				}
-			});
-		}).resume();
-	} else if( request.url.indexOf("/cards") === 0 ) {
-		cards.handle(request, response);
-	} else if( request.url.indexOf("/decks") === 0 ) {	
-		decks.handle(request, response);
-	} else {
-		request.resume();
-	}
+			} else {
+				console.log('%s - %s', request.url, response.message);
+			}
+		});
+	}).resume();
+	
 }).listen(3000);
