@@ -46,11 +46,20 @@
                     }
 
                     // Todo: Use Deck Id to Get Deck
-                    jQuery.getJSON("data/deck.json", null, function(deck_json) {
-                        var deck = new Deck(deck_json);
+                    // jQuery.getJSON("data/deck.json", null, function(deck_json) {
+                    //     var deck = new Deck(deck_json);
+                    //     var flashy = new Flashy(deck);
+                    //     flashy.render($("#main"), flashy_type);
+                    // });
+
+                    var myFirebaseRef = new Firebase("https://flashy.firebaseio.com/");
+                    myFirebaseRef.child("decks/-JaZBLp3mR8rMeOBk5Vv").on("value", function(snapshot) {
+                        var deck = new Deck(snapshot.val());
                         var flashy = new Flashy(deck);
                         flashy.render($("#main"), flashy_type);
                     });
+
+
                 });
             });
         </script>

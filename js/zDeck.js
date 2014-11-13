@@ -1,35 +1,19 @@
 function Deck(deck_json){
-	var card_ids = deck_json.cards;
-	this.constributers = deck_json.constributers;
-	this.description = deck_json.description;
 	this.name = deck_json.name;
-	this.score = deck_json.score;
-	this.tags = deck_json.tags;
-	this.cards = [];
-	if(card_ids){
-		this.cards = new getCards(card_ids);
-		console.log("return from getCards");
-		console.log(this.cards);
-	}
+	this.description = deck_json.description;
+	this.copied = deck_json.copied;
+	this.favorited = deck_json.favorited;
+	this.blanket_tags = deck_json.blanket_tags;
+	this.tags = deck_json.tags;	
+	// if(deck_json.cards){
+	// 	this.cards = [];
+	// 	deck_json.cards.forEach(function(card_json){
+	// 		this.cards.push(new Card(card_json));
+	// 	}, this);
+	// }
 }
 
-function getCards(card_ids) {
-	var cards = [];
-	var myFirebaseRef = new Firebase("https://flashy.firebaseio.com/");
-	card_ids.forEach(function(card_id) {
-    myFirebaseRef.child("cards").child(card_id).on("value", function(snapshot) {
-			var card = new Card(snapshot.val());
-      cards.push(card);
-			console.log("inside");
-			console.log(cards);
-    });
-    console.log("outside");
-    console.log(cards);
-	})
-  console.log("end");
-  console.log(cards);
-  return cards;
-}
+
 
 Deck.prototype.render = function(deck_container, type){
 	var self = this;
