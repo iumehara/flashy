@@ -18,6 +18,7 @@
         <!-- Lib -->
         <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="lib/handlebars-v2.0.0.js"></script>
+        <script type="text/javascript" src="js/polyfills.js"></script>
 
         <!-- Js -->
         <script type="text/javascript" src="js/Flashy.js"></script>
@@ -54,9 +55,10 @@
 
                     var myFirebaseRef = new Firebase("https://flashy.firebaseio.com/");
                     myFirebaseRef.child("decks/-JaZBLp3mR8rMeOBk5Vv").on("value", function(snapshot) {
-                        var deck = new Deck(snapshot.val());
-                        var flashy = new Flashy(deck);
-                        flashy.render($("#main"), flashy_type);
+                        var deck = new Deck(snapshot.val(), function(){
+                            var flashy = new Flashy(deck);
+                            flashy.render($("#main"), flashy_type);
+                        });
                     });
 
 
