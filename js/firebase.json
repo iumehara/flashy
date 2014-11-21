@@ -3,10 +3,35 @@
 	"bobby1" : {
 		"name": "Bob Anderson",
 		"description": "I'm a teacher from Utah!",
+		"times_copied": 30,
+	  "copied": 100,
+	  "favorited": 85,
 		"decks": {
 			"lkasdf*asd83": true,
 			"pdasdf*a9378": true,
 			"d4asdf*asd83": true
+		},
+		"favorites": {
+			"cards": {
+				"lkasdf*asd83": true,
+				"lkasdf*asd83": true
+				},
+			"decks": {
+				"lkasdf*asd83": true,
+				"lkasdf*asd83": true
+			}
+		},
+
+		"history": {
+			"a'sdfkadsf": {
+				"access_time": 342223,
+				"time_spent": 65,
+				"cards": {
+					"a;lsd;aslkdf": 55,
+					"a;lsd;aslkdf": 33,
+					"a;lsd;aslkdf": 33
+				}
+			}
 		}
 	}
 }
@@ -23,6 +48,11 @@
         "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
     },
     "original_id": 3,
+	  "copied": 30,
+	  "favorited": 30,
+	  "tags": {
+	    "presidents": true
+	  },
     "contributers": {
     	"1": "bobby",
     	"2": "funnyjimmy"
@@ -35,11 +65,15 @@
 	"lkasdf*asd83": {		
 	  "name": "US Presidents",
 	  "description": "A list of my favorite presidents!",
-	  "score": 30,
+	  "copied": 30,
+	  "favorited": 30,
+	  "blanket_tags": {
+			"presidents": true
+	  },
 	  "tags": {
-	    "presidents": true,
-	    "politics": true,
-	    "US History": true
+	    "presidents": 50,
+	    "politics": 8,
+	    "US History": 22,
 	  },
 	  "cards": {
 	  	"1": ";alsdkfj;as",
@@ -54,4 +88,5 @@
 }
 
 // contributers: first, the creator is added as #1. Then, all subsequent copiers are added onto list in cooy-time order.
+// tags: cards require at least one tag. The deck's intial tag is automatically to each card of the deck.
 

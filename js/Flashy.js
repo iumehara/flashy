@@ -48,27 +48,95 @@ function fireStarter() {
 	var myFirebaseRef = new Firebase("https://flashy.firebaseio.com/");
 
 	// myFirebaseRef.set({
-	//   title: "Hello World!",
-	//   author: "Firebase",
-	//   location: {
-	//     city: "San Francisco",
-	//     state: "California",
-	//     zip: 94103
+	//   decks: {
+	//     name: "San Francisco",
+	//     description: "California",
+	//     score: 94103
 	//   }
 	// });
 
-	// myFirebaseRef.update({
-	// 	"cards": {"New York": "hello"}
+	// myFirebaseRef.child("decks").child("-JaZBLp3mR8rMeOBk5Vv").child("cards").update({
+	// 	2: "-JaZxIzkl1359imKmmek"
 	// })
+
 	// myFirebaseRef.child("location").update({
 	// 	"city": "New York"
 	// })
 
-	myFirebaseRef.child("users").push({
-		"city": "New York"
-	})
+	// myFirebaseRef.child("decks").push({
 
-	// myFirebaseRef.child("location/city").on("value", function(snapshot) {
+
+	// myFirebaseRef.child("decks").push({
+	//   "cards": {
+	//   	"1": ""
+	//   },
+ //    "contributers": {
+ //    	"1": ""
+ //    },
+	//   "description": "Covers six of the seven continents",
+	//   "name": "Countries and Capitals",
+	//   "score": 30,
+	//   "tags": {
+	//     "geography": true,
+	//     "international": true,
+	//     "Africa": true,
+	//     "Asia": true,
+	//     "Australia": true,
+	//     "Europe": true,
+	//     "North America": true,
+	//     "South America": true
+	//   }
+	// })
+
+	// myFirebaseRef.child("cards").push({
+ //    "back": {
+ //        "text": "26th president of the US.",
+ //        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
+ //    },
+ //    "contributers": {
+ //    	"1": "bobby",
+ //    	"2": "funnyjimmy"
+ //    },
+ //    "front": {
+ //        "text": "Theodore Roosevelt",
+ //        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/T_Roosevelt.jpg/477px-T_Roosevelt.jpg"
+ //    },
+ //    "original_id": 3
+	// })
+
+	// myFirebaseRef.child("cards").push({
+ //    "back": {
+ //        "text": "16th president of the US.",
+ //        "details": "Abraham Lincoln Listeni/ˈeɪbrəhæm ˈlɪŋkən/ (February 12, 1809 – April 15, 1865) was the 16th president of the United States, serving from March 1861 until his assassination in April 1865. Lincoln led the United States through its Civil War—its bloodiest war and its greatest moral, constitutional and political crisis.[1][2] In doing so, he preserved the Union, abolished slavery, strengthened the federal government, and modernized the economy. Reared in a poor family on the western frontier, Lincoln was a self-educated lawyer in Illinois, a Whig Party leader, state legislator during the 1830s, and a one-term member of the Congress during the 1840s. He promoted rapid modernization of the economy through banks, canals, railroads and tariffs to encourage the building of factories; he opposed the war with Mexico in 1846. After a series of highly publicized debates in 1858, during which Lincoln spoke out against the expansion of slavery, he lost the U.S. Senate race to his archrival, Democrat Stephen A. Douglas. Lincoln, a moderate from a swing state, secured the Republican Party presidential nomination in 1860. With very little support in the slave states, Lincoln swept the North and was elected president in 1860. His election prompted seven southern slave states to form the Confederacy before he took the office. No compromise or reconciliation was found regarding slavery."
+ //    },
+ //    "contributers": {
+ //    	"1": "bobby",
+ //    	"2": "funnyjimmy"
+ //    },
+ //    "front": {
+ //        "text": "Abraham Lincoln",
+ //        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Abraham_Lincoln_November_1863.jpg/486px-Abraham_Lincoln_November_1863.jpg"
+ //    },
+ //    "original_id": "",
+ //    "tags": {
+ //        "civil war": true,
+ //        "honest": true
+ //    }
+	// })
+
+	// myFirebaseRef.child("users").set({
+	// 	"bobby1" : {
+	// 		"name": "Bob Anderson",
+	// 		"description": "I'm a teacher from Utah!",
+	// 		"decks": {
+	// 			"-JaZBLp3mR8rMeOBk5Vv": true,
+	// 			"-JaZEYGHDOR451MMn0kU": true
+	// 		}
+	// 	}
+	// })
+
+
+	// myFirebaseRef.child("decks/-JaZBLp3mR8rMeOBk5Vv/cards").on("value", function(snapshot) {
 	//   alert(snapshot.val());  // Alerts "San Francisco"
 	// });
 }

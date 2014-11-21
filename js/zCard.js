@@ -1,12 +1,15 @@
 function Card(card_json){
-	this.front_image = card_json["front"]["image"];
-	this.front_text = card_json["front"]["text"];
-	this.back_details = card_json["back"]["details"];
-	this.bacl_text = card_json["back"]["text"];
-	this.contributers = card_json["contributers"];
-	this.original_id = card_json["original_id"];
-	this.tags = card_json["tags"];
+	this.id = card_json.id;
+	this.front = card_json.front;
+	this.back = card_json.back;
+	this.category = card_json.category;
+	this.favorite = card_json.favorite;
+	this.score = card_json.score;
+	this.original_id = card_json.original_id;
+	this.tags = card_json.tags;
 }
+
+
 
 Card.prototype.render = function(container, type){
 	var templateName = (type === "creator" ? "card_creator" : "card");
